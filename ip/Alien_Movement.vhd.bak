@@ -1,0 +1,34 @@
+library   ieee;
+use       ieee.std_logic_1164.all;
+
+entity Alien_Movement is
+	PORT(clk : in std_logic;
+		reset : in std_logic;
+		counter : buffer integer := 0;
+		x_pos : out integer	
+	);
+end entity Alien_Movement;
+
+
+architecture arch of Alien_Movement is
+
+begin
+
+	process(clk, reset) is
+	variable cnt : integer := counter
+	begin
+	
+		if(reset = '1') then
+			x_pos <= 640;
+		elsif(rising_edge(clk)) then
+			cnt := cnt + 1;
+		end if;
+		
+		if(cnt = 78) then
+			x_pos <= x_pos - 1;
+			cnt := 0;
+		end if;
+		
+		counter <= cnt;	
+
+end architecture arch;

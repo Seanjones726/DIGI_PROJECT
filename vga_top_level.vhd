@@ -16,6 +16,7 @@ entity vga_top is
 	
 	port(
 	
+		key1 : in std_logic;
 		-- Inputs for image generation
 		
 		pixel_clk_m		:	IN	STD_LOGIC;     -- pixel clock for VGA mode being used 
@@ -65,29 +66,71 @@ architecture vga_structural of vga_top is
 		
 	end component;
 	
+	component Alien_Movement is
+		PORT(clk : in std_logic;
+			reset : in std_logic;
+			counter : buffer integer := 0;
+			x_pos : out integer	
+		);
+	end component Alien_Movement;
+	
+	component pll IS
+		PORT
+		(
+			inclk0		: IN STD_LOGIC  := '0';
+			c0		: OUT STD_LOGIC 
+		);
+	END component;
+
+	
 	component hw_image_generator is
 	
 		port(
     disp_ena :  IN   STD_LOGIC;  --display enable ('1' = display time, '0' = blanking time)
     row      :  IN   INTEGER;    --row pixel coordinate
     column   :  IN   INTEGER;    --column pixel coordinate
+	 lives		:	IN	INTEGER;
 	 triangle_start_h : IN INTEGER;
 	 triangle_start_v : IN INTEGER;
     red      :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --red magnitude output to DAC
     green    :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --green magnitude output to DAC
-    blue     :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0')); --blue magnitude output to DAC
+    blue     :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --blue magnitude output to DAC
+	 Alien_L_en	:	IN STD_LOGIC;
+	 Alien_M_en	:	IN STD_LOGIC;
+	 Alien_S_en	:	IN STD_LOGIC;
+	 Alien_L_x	:	IN INTEGER;
+	 Alien_L_y	:	IN INTEGER;
+	 Alien_M_x	:	IN INTEGER;
+	 Alien_M_y	:	IN INTEGER;
+	 Alien_S_x	:	IN INTEGER;
+	 Alien_S_y	:	IN INTEGER); 
 END component;
 	
 	signal pll_OUT_to_vga_controller_IN, dispEn : STD_LOGIC;
 	signal rowSignal, colSignal : INTEGER;
+	signal lives_sig : INTEGER := 2;
+	signal L_en, M_en, S_en : STD_LOGIC := '1';
+	signal L_xSig : INTEGER := 600;
+	signal L_ySig : INTEGER := 50;
+	signal M_xSig : INTEGER := 200;
+	signal M_ySig : INTEGER := 300;
+	signal S_xSig : INTEGER := 520;
+	signal S_ySig : INTEGER := 470;
+	signal c0_sig : std_logic;
 	
 	
 begin	
 
+pll_inst : pll PORT MAP (
+		inclk0	 => pixel_clk_m,
+		c0	 => c0_sig
+	);
 
 -- Just need 3 components for VGA system 
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
 	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, reset_n_m, h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
-	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal,330,330, red_m, green_m, blue_m);
-
+	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, 330,330, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
+	--U4	:	Alien_Movement port map(pixel_clk_m, not key1, open, L_xSig);
+	U5	:	Alien_Movement port map(pixel_clk_m, not key1, open, M_xSig);
+	--U6	:	Alien_Movement port map(pixel_clk_m, not key1, open, S_xSig);
 end vga_structural;
