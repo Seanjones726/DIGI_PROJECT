@@ -17,6 +17,9 @@ entity vga_top is
 	port(
 	
 		key1 : in std_logic;
+		sw0 : in std_logic;
+		sw1 : in std_logic;
+		sw2 : in std_logic;
 		-- Inputs for image generation
 		
 		pixel_clk_m		:	IN	STD_LOGIC;     -- pixel clock for VGA mode being used 
@@ -68,7 +71,7 @@ architecture vga_structural of vga_top is
 	
 	component Alien_Movement is
 		PORT(clk : in std_logic;
-			reset : in std_logic;
+			enable : in std_logic;
 			counter : buffer integer := 0;
 			x_pos : out integer	
 		);
@@ -115,11 +118,16 @@ END component;
 	signal M_xSig : INTEGER := 200;
 	signal M_ySig : INTEGER := 300;
 	signal S_xSig : INTEGER := 520;
-	signal S_ySig : INTEGER := 470;
+	signal S_ySig : INTEGER := 430;
 	signal c0_sig : std_logic;
+	--signal am_rst1, am_rst2, am_rst3 : std_logic;
 	
 	
 begin	
+
+L_en <= sw0;
+M_en <= sw1;
+S_en <= sw2;
 
 pll_inst : pll PORT MAP (
 		inclk0	 => pixel_clk_m,
@@ -130,7 +138,7 @@ pll_inst : pll PORT MAP (
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
 	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, reset_n_m, h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
 	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, 330,330, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
-	--U4	:	Alien_Movement port map(pixel_clk_m, not key1, open, L_xSig);
-	U5	:	Alien_Movement port map(pixel_clk_m, not key1, open, M_xSig);
-	--U6	:	Alien_Movement port map(pixel_clk_m, not key1, open, S_xSig);
+	U4	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw0, counter => open, x_pos => L_xSig);
+	U5	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw1, counter => open, x_pos => M_xSig);
+	U6	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw2, counter => open, x_pos => S_xSig);
 end vga_structural;

@@ -108,11 +108,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_n_m",
+					"name" : "sw0",
 					"strict" : false
 				},
 				{
-					"name" : "key1",
+					"name" : "sw1",
+					"strict" : false
+				},
+				{
+					"name" : "sw2",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n_m",
 					"strict" : false
 				},
 				{

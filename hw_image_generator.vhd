@@ -90,10 +90,10 @@ BEGIN
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '1');
-		--elsif(row = hud_line_bottom) then
-			--red <= (OTHERS => '1');
-			--green <= (OTHERS => '0');
-			--blue <= (OTHERS => '1');
+		elsif(row = hud_line_bottom) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '1');
 		elsif(column <= triangle_lives_x1) and (column >= 0) and (row >= 0) and (row <= triangle_lives_y1) and (lives >= 1) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');

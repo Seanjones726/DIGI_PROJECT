@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_top
-Wed Nov 17 13:15:00 2021
+Thu Nov 18 18:14:50 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,23 +14,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: pll:pll_inst|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: vga_pll_25_175:U1|altpll:altpll_component
- 16. Parameter Settings for User Entity Instance: vga_controller:U2
- 17. Parameter Settings for User Entity Instance: hw_image_generator:U3
- 18. altpll Parameter Settings by Entity Instance
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: pll:pll_inst|altpll:altpll_component
+ 14. Parameter Settings for User Entity Instance: vga_pll_25_175:U1|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: vga_controller:U2
+ 16. Parameter Settings for User Entity Instance: hw_image_generator:U3
+ 17. altpll Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "Alien_Movement:U6"
  19. Port Connectivity Checks: "Alien_Movement:U5"
- 20. Port Connectivity Checks: "hw_image_generator:U3"
- 21. Port Connectivity Checks: "vga_controller:U2"
- 22. Port Connectivity Checks: "pll:pll_inst"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 20. Port Connectivity Checks: "Alien_Movement:U4"
+ 21. Port Connectivity Checks: "hw_image_generator:U3"
+ 22. Port Connectivity Checks: "vga_controller:U2"
+ 23. Port Connectivity Checks: "pll:pll_inst"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,16 +57,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 17 13:15:00 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 18 18:14:50 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; vga_top                                     ;
 ; Top-level Entity Name              ; vga_top                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 352                                         ;
-;     Total combinational functions  ; 333                                         ;
-;     Dedicated logic registers      ; 73                                          ;
-; Total registers                    ; 73                                          ;
-; Total pins                         ; 29                                          ;
+; Total logic elements               ; 610                                         ;
+;     Total combinational functions  ; 591                                         ;
+;     Dedicated logic registers      ; 233                                         ;
+; Total registers                    ; 233                                         ;
+; Total pins                         ; 32                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -199,39 +200,39 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                   ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                           ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 352                                                                                             ;
-;                                             ;                                                                                                 ;
-; Total combinational functions               ; 333                                                                                             ;
-; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 81                                                                                              ;
-;     -- 3 input functions                    ; 104                                                                                             ;
-;     -- <=2 input functions                  ; 148                                                                                             ;
-;                                             ;                                                                                                 ;
-; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 181                                                                                             ;
-;     -- arithmetic mode                      ; 152                                                                                             ;
-;                                             ;                                                                                                 ;
-; Total registers                             ; 73                                                                                              ;
-;     -- Dedicated logic registers            ; 73                                                                                              ;
-;     -- I/O registers                        ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; I/O pins                                    ; 29                                                                                              ;
-;                                             ;                                                                                                 ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; Total PLLs                                  ; 1                                                                                               ;
-;     -- PLLs                                 ; 1                                                                                               ;
-;                                             ;                                                                                                 ;
-; Maximum fan-out node                        ; vga_pll_25_175:U1|altpll:altpll_component|vga_pll_25_175_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 42                                                                                              ;
-; Total fan-out                               ; 1251                                                                                            ;
-; Average fan-out                             ; 2.69                                                                                            ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 610               ;
+;                                             ;                   ;
+; Total combinational functions               ; 591               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 125               ;
+;     -- 3 input functions                    ; 84                ;
+;     -- <=2 input functions                  ; 382               ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 219               ;
+;     -- arithmetic mode                      ; 372               ;
+;                                             ;                   ;
+; Total registers                             ; 233               ;
+;     -- Dedicated logic registers            ; 233               ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 32                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Total PLLs                                  ; 1                 ;
+;     -- PLLs                                 ; 1                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; pixel_clk_m~input ;
+; Maximum fan-out                             ; 193               ;
+; Total fan-out                               ; 2368              ;
+; Average fan-out                             ; 2.66              ;
++---------------------------------------------+-------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -239,9 +240,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                     ; Entity Name           ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-----------------------+--------------+
-; |vga_top                                        ; 333 (0)             ; 73 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |vga_top                                                                                ; vga_top               ; work         ;
-;    |Alien_Movement:U5|                          ; 141 (141)           ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U5                                                              ; Alien_Movement        ; work         ;
-;    |hw_image_generator:U3|                      ; 139 (139)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|hw_image_generator:U3                                                          ; hw_image_generator    ; work         ;
+; |vga_top                                        ; 591 (0)             ; 233 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 32   ; 0            ; 0          ; |vga_top                                                                                ; vga_top               ; work         ;
+;    |Alien_Movement:U4|                          ; 90 (90)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U4                                                              ; Alien_Movement        ; work         ;
+;    |Alien_Movement:U5|                          ; 90 (90)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U5                                                              ; Alien_Movement        ; work         ;
+;    |Alien_Movement:U6|                          ; 90 (90)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U6                                                              ; Alien_Movement        ; work         ;
+;    |hw_image_generator:U3|                      ; 268 (268)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|hw_image_generator:U3                                                          ; hw_image_generator    ; work         ;
 ;    |vga_controller:U2|                          ; 53 (53)             ; 41 (41)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_controller:U2                                                              ; vga_controller        ; work         ;
 ;    |vga_pll_25_175:U1|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_pll_25_175:U1                                                              ; vga_pll_25_175        ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_pll_25_175:U1|altpll:altpll_component                                      ; altpll                ; work         ;
@@ -259,57 +262,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Alien_Movement:U5|temp[31]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[10]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[11]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[12]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[13]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[14]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[15]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[16]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[17]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[18]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[19]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[20]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[21]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[22]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[23]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[24]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[25]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[26]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[27]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[28]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[29]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[30]                          ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[9]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[8]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[7]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[6]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[5]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[4]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[3]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[2]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[1]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Alien_Movement:U5|temp[0]                           ; Alien_Movement:U5|temp[31] ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                            ;                        ;
-+-----------------------------------------------------+----------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +---------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                              ;
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
 ; vga_controller:U2|column[10..30]       ; Stuck at GND due to stuck port data_in ;
-; vga_controller:U2|row[9..30]           ; Stuck at GND due to stuck port data_in ;
+; vga_controller:U2|row[9..31]           ; Stuck at GND due to stuck port data_in ;
 ; vga_controller:U2|column[31]           ; Stuck at GND due to stuck port data_in ;
-; vga_controller:U2|row[31]              ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 45 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
@@ -319,12 +279,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 73    ;
+; Total registers                              ; 233   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Clear ; 137   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 50    ;
+; Number of registers using Clock Enable       ; 211   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -336,7 +296,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; vga_controller:U2|h_sync               ; 1       ;
 ; vga_controller:U2|v_sync               ; 1       ;
-; Total number of inverted registers = 2 ;         ;
+; Alien_Movement:U4|temp[9]              ; 3       ;
+; Alien_Movement:U4|temp[7]              ; 3       ;
+; Alien_Movement:U5|temp[9]              ; 3       ;
+; Alien_Movement:U5|temp[7]              ; 3       ;
+; Alien_Movement:U6|temp[9]              ; 3       ;
+; Alien_Movement:U6|temp[7]              ; 3       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
@@ -1156,7 +1122,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alien_Movement:U6"                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; counter ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Alien_Movement:U5"                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; counter ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alien_Movement:U4"                                                                     ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1190,16 +1174,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; triangle_start_v[2]     ; Input ; Info     ; Stuck at GND ;
 ; triangle_start_v[1]     ; Input ; Info     ; Stuck at VCC ;
 ; triangle_start_v[0]     ; Input ; Info     ; Stuck at GND ;
-; alien_l_en              ; Input ; Info     ; Stuck at VCC ;
-; alien_m_en              ; Input ; Info     ; Stuck at VCC ;
-; alien_s_en              ; Input ; Info     ; Stuck at VCC ;
-; alien_l_x[4..3]         ; Input ; Info     ; Stuck at VCC ;
-; alien_l_x[31..10]       ; Input ; Info     ; Stuck at GND ;
-; alien_l_x[8..7]         ; Input ; Info     ; Stuck at GND ;
-; alien_l_x[2..0]         ; Input ; Info     ; Stuck at GND ;
-; alien_l_x[9]            ; Input ; Info     ; Stuck at VCC ;
-; alien_l_x[6]            ; Input ; Info     ; Stuck at VCC ;
-; alien_l_x[5]            ; Input ; Info     ; Stuck at GND ;
 ; alien_l_y[5..4]         ; Input ; Info     ; Stuck at VCC ;
 ; alien_l_y[31..6]        ; Input ; Info     ; Stuck at GND ;
 ; alien_l_y[3..2]         ; Input ; Info     ; Stuck at GND ;
@@ -1212,17 +1186,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; alien_m_y[8]            ; Input ; Info     ; Stuck at VCC ;
 ; alien_m_y[5]            ; Input ; Info     ; Stuck at VCC ;
 ; alien_m_y[4]            ; Input ; Info     ; Stuck at GND ;
-; alien_s_x[31..10]       ; Input ; Info     ; Stuck at GND ;
-; alien_s_x[8..4]         ; Input ; Info     ; Stuck at GND ;
-; alien_s_x[2..0]         ; Input ; Info     ; Stuck at GND ;
-; alien_s_x[9]            ; Input ; Info     ; Stuck at VCC ;
-; alien_s_x[3]            ; Input ; Info     ; Stuck at VCC ;
-; alien_s_y[8..6]         ; Input ; Info     ; Stuck at VCC ;
-; alien_s_y[2..1]         ; Input ; Info     ; Stuck at VCC ;
+; alien_s_y[8..7]         ; Input ; Info     ; Stuck at VCC ;
+; alien_s_y[3..1]         ; Input ; Info     ; Stuck at VCC ;
 ; alien_s_y[31..9]        ; Input ; Info     ; Stuck at GND ;
-; alien_s_y[5]            ; Input ; Info     ; Stuck at GND ;
-; alien_s_y[4]            ; Input ; Info     ; Stuck at VCC ;
-; alien_s_y[3]            ; Input ; Info     ; Stuck at GND ;
+; alien_s_y[6]            ; Input ; Info     ; Stuck at GND ;
+; alien_s_y[5]            ; Input ; Info     ; Stuck at VCC ;
+; alien_s_y[4]            ; Input ; Info     ; Stuck at GND ;
 ; alien_s_y[0]            ; Input ; Info     ; Stuck at GND ;
 +-------------------------+-------+----------+--------------+
 
@@ -1251,24 +1220,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 73                          ;
-;     CLR               ; 23                          ;
-;     ENA CLR           ; 50                          ;
-; cycloneiii_lcell_comb ; 335                         ;
-;     arith             ; 152                         ;
-;         2 data inputs ; 115                         ;
-;         3 data inputs ; 37                          ;
-;     normal            ; 183                         ;
+; boundary_port         ; 32                          ;
+; cycloneiii_ff         ; 233                         ;
+;     CLR               ; 22                          ;
+;     ENA               ; 96                          ;
+;     ENA CLR           ; 115                         ;
+; cycloneiii_lcell_comb ; 593                         ;
+;     arith             ; 372                         ;
+;         2 data inputs ; 300                         ;
+;         3 data inputs ; 72                          ;
+;     normal            ; 221                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 67                          ;
-;         4 data inputs ; 81                          ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 125                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 5.34                        ;
+; Max LUT depth         ; 8.70                        ;
+; Average LUT depth     ; 5.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1287,12 +1257,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 17 13:14:43 2021
+    Info: Processing started: Thu Nov 18 18:14:31 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_top -c vga_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
-    Info (12022): Found design unit 1: vga_top-vga_structural File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 38
+    Info (12022): Found design unit 1: vga_top-vga_structural File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 41
     Info (12023): Found entity 1: vga_top File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file vga_pll_25_175.vhd
     Info (12022): Found design unit 1: vga_pll_25_175-SYN File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 51
@@ -1316,17 +1286,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file project
     Info (12022): Found design unit 1: project_tb-tb File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/project_tb.vhd Line: 7
     Info (12023): Found entity 1: project_tb File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/project_tb.vhd Line: 4
 Info (12127): Elaborating entity "vga_top" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(111): used explicit default value for signal "lives_sig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 111
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(112): used explicit default value for signal "L_en" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 112
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(112): used explicit default value for signal "M_en" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 112
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(112): used explicit default value for signal "S_en" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 112
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(113): used explicit default value for signal "L_xSig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 113
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(114): used explicit default value for signal "L_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 114
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(116): used explicit default value for signal "M_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 116
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(117): used explicit default value for signal "S_xSig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 117
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(118): used explicit default value for signal "S_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 118
-Warning (10036): Verilog HDL or VHDL warning at vga_top_level.vhd(119): object "c0_sig" assigned a value but never read File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 119
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 124
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(114): used explicit default value for signal "lives_sig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 114
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(117): used explicit default value for signal "L_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 117
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(119): used explicit default value for signal "M_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 119
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(121): used explicit default value for signal "S_ySig" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 121
+Warning (10036): Verilog HDL or VHDL warning at vga_top_level.vhd(122): object "c0_sig" assigned a value but never read File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 122
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 132
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
@@ -1387,7 +1352,7 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_pll_25_175" for hierarchy "vga_pll_25_175:U1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 130
+Info (12128): Elaborating entity "vga_pll_25_175" for hierarchy "vga_pll_25_175:U1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 138
 Info (12128): Elaborating entity "altpll" for hierarchy "vga_pll_25_175:U1|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "vga_pll_25_175:U1|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
 Info (12133): Instantiated megafunction "vga_pll_25_175:U1|altpll:altpll_component" with the following parameter: File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
@@ -1448,8 +1413,8 @@ Info (12133): Instantiated megafunction "vga_pll_25_175:U1|altpll:altpll_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/vga_pll_25_175_altpll.v
     Info (12023): Found entity 1: vga_pll_25_175_altpll File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/vga_pll_25_175_altpll.v Line: 29
 Info (12128): Elaborating entity "vga_pll_25_175_altpll" for hierarchy "vga_pll_25_175:U1|altpll:altpll_component|vga_pll_25_175_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:U2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 131
-Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:U3" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 132
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:U2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 139
+Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:U3" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 140
 Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(72): used initial value expression for variable "triangle_x" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 72
 Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(72): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 72
 Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(72): signal "triangle_start_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 72
@@ -1487,128 +1452,37 @@ Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(117): 
 Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(121): signal "Alien_S_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 121
 Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(121): signal "Alien_S_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 121
 Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(121): signal "Alien_S_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 121
-Info (12128): Elaborating entity "Alien_Movement" for hierarchy "Alien_Movement:U5" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at Alien_Movement.vhd(21): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at Alien_Movement.vhd(34): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 34
-Warning (10631): VHDL Process Statement warning at Alien_Movement.vhd(20): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[0]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[1]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[2]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[3]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[4]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[5]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[6]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[7]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[8]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[9]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[10]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[11]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[12]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[13]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[14]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[15]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[16]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[17]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[18]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[19]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[20]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[21]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[22]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[23]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[24]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[25]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[26]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[27]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[28]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[29]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[30]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-Info (10041): Inferred latch for "temp[31]" at Alien_Movement.vhd(20) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
+Info (12128): Elaborating entity "Alien_Movement" for hierarchy "Alien_Movement:U4" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 141
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
         Warning (14320): Synthesized away node "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/pll_altpll.v Line: 77
-Warning (13012): Latch Alien_Movement:U5|temp[31] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[10] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[11] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[12] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[13] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[14] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[15] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[16] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[17] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[18] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[19] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[20] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[21] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[22] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[23] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[24] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[25] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[26] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[27] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[28] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[29] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[30] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[9] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[8] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[7] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[6] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[5] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[4] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[3] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[2] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[1] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
-Warning (13012): Latch Alien_Movement:U5|temp[0] has unsafe behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Alien_Movement:U5|cnt[0] File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 25
 Info (13000): Registers with preset signals will power-up high File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 43
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register vga_controller:U2|row[0] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
-    Critical Warning (18010): Register vga_controller:U2|column[31] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
     Critical Warning (18010): Register vga_controller:U2|row[31] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
+    Critical Warning (18010): Register vga_controller:U2|column[31] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
+    Critical Warning (18010): Register Alien_Movement:U4|temp[9] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
+    Critical Warning (18010): Register Alien_Movement:U4|temp[7] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
     Critical Warning (18010): Register vga_controller:U2|column[0] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
+    Critical Warning (18010): Register vga_controller:U2|row[0] will power up to Low File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 65
+    Critical Warning (18010): Register Alien_Movement:U5|temp[9] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
+    Critical Warning (18010): Register Alien_Movement:U5|temp[7] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
+    Critical Warning (18010): Register Alien_Movement:U6|temp[9] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
+    Critical Warning (18010): Register Alien_Movement:U6|temp[7] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 27
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 402 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 19
+Info (21057): Implemented 663 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 372 logic cells
+    Info (21061): Implemented 630 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Wed Nov 17 13:15:00 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Thu Nov 18 18:14:50 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
 
 
