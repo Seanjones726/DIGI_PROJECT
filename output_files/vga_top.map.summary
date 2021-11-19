@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Nov 18 18:14:50 2021
+Analysis & Synthesis Status : Successful - Fri Nov 19 15:41:46 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : vga_top
 Top-level Entity Name : vga_top
 Family : MAX 10
-Total logic elements : 610
-    Total combinational functions : 591
-    Dedicated logic registers : 233
-Total registers : 233
-Total pins : 32
+Total logic elements : 1,457
+    Total combinational functions : 1,365
+    Dedicated logic registers : 494
+Total registers : 494
+Total pins : 84
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

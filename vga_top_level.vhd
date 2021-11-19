@@ -15,6 +15,19 @@ use       ieee.std_logic_1164.all;
 entity vga_top is
 	
 	port(
+	   --Accel. Ports
+		
+		GSENSOR_CS_N : OUT	STD_LOGIC;
+		GSENSOR_SCLK : OUT	STD_LOGIC;
+		GSENSOR_SDI  : INOUT	STD_LOGIC;
+		GSENSOR_SDO  : INOUT	STD_LOGIC;
+		
+		
+		data_x      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
+		data_y      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
+		data_z      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
+		
+		--general Keys and inputs for testing
 	
 		key1 : in std_logic;
 		sw0 : in std_logic;
@@ -108,6 +121,26 @@ architecture vga_structural of vga_top is
 	 Alien_S_x	:	IN INTEGER;
 	 Alien_S_y	:	IN INTEGER); 
 END component;
+
+	component ship_controller is
+		port(
+
+				
+				clk: in STD_LOGIC;
+				rst: in STD_LOGIC;
+				
+					
+				GSENSOR_CS_N : OUT	STD_LOGIC;
+				GSENSOR_SCLK : OUT	STD_LOGIC;
+				GSENSOR_SDI  : INOUT	STD_LOGIC;
+				GSENSOR_SDO  : INOUT	STD_LOGIC;
+				
+				x_pos     :  OUT INTEGER;
+				y_pos     :  OUT INTEGER;
+				data_x      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
+				data_y      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
+				data_z      : BUFFER STD_LOGIC_VECTOR(15 downto 0));
+		end component;
 	
 	signal pll_OUT_to_vga_controller_IN, dispEn : STD_LOGIC;
 	signal rowSignal, colSignal : INTEGER;
@@ -120,6 +153,7 @@ END component;
 	signal S_xSig : INTEGER := 520;
 	signal S_ySig : INTEGER := 430;
 	signal c0_sig : std_logic;
+	signal ship_xSig,ship_ySig : integer;
 	--signal am_rst1, am_rst2, am_rst3 : std_logic;
 	
 	
@@ -137,8 +171,15 @@ pll_inst : pll PORT MAP (
 -- Just need 3 components for VGA system 
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
 	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, reset_n_m, h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
-	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, 330,330, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
+	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
 	U4	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw0, counter => open, x_pos => L_xSig);
 	U5	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw1, counter => open, x_pos => M_xSig);
 	U6	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw2, counter => open, x_pos => S_xSig);
+	U7 : ship_controller port map(pixel_clk_m,not(key1),GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
 end vga_structural;
+
+
+
+
+
+
