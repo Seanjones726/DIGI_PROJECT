@@ -36,7 +36,7 @@ ENTITY hw_image_generator IS
 	hud_line_bottom : INTEGER := 450;
 	L_size : INTEGER := 100;
 	M_size : INTEGER := 50;
-	S_size : INTEGER := 10
+	S_size : INTEGER := 20
 
 	);  
   PORT(

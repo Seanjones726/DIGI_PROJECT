@@ -5,6 +5,7 @@ use IEEE.numeric_std.all;
 entity Alien_Movement is
 	PORT(clk : in std_logic;
 		enable : in std_logic;
+		x_start : in integer;
 		counter : buffer integer := 0;
 		x_pos : out integer	
 	);
@@ -35,8 +36,12 @@ begin
 				end if;
 			end if;
 		else
-			temp <= 640;
+			temp <= x_start;
 		end if;
+		
+--		if(temp <= 0) then
+--			enable <= '0';
+--		end if;
 		
 		
 		

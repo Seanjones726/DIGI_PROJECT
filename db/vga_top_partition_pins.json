@@ -316,27 +316,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw0",
-					"strict" : false
-				},
-				{
-					"name" : "sw2",
-					"strict" : false
-				},
-				{
-					"name" : "sw1",
-					"strict" : false
-				},
-				{
 					"name" : "pixel_clk_m",
 					"strict" : false
 				},
 				{
 					"name" : "reset_n_m",
-					"strict" : false
-				},
-				{
-					"name" : "key1",
 					"strict" : false
 				}
 			]

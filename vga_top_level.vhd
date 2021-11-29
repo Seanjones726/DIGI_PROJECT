@@ -85,10 +85,45 @@ architecture vga_structural of vga_top is
 	component Alien_Movement is
 		PORT(clk : in std_logic;
 			enable : in std_logic;
+			x_start : in integer;
 			counter : buffer integer := 0;
 			x_pos : out integer	
 		);
 	end component Alien_Movement;
+	
+	component ship_collision_detector is
+		generic(S_size : integer := 20;
+					M_size : integer := 50;
+					L_size : integer := 100);
+		
+		port(shipx	:	in integer;
+				shipy	:	in integer;
+				clk : in std_logic;
+				S_xMax		: in integer;
+				S_yMin		:	in integer;
+				M_xMax		: in integer;
+				M_yMin		:	in integer;
+				L_xMax		: in integer;
+				L_yMin		:	in integer;
+				ship_reset		:	buffer std_logic;
+				lives				:	out integer);
+			
+	end component;
+	
+	component alien_spawning is
+
+		port(clk : in std_logic;
+				S_status : buffer std_logic;
+				M_status : buffer std_logic;
+				L_status : buffer std_logic;			
+				S_y : out integer;
+				M_y : out integer;
+				L_y : out integer;
+				S_x : in integer;
+				M_x : in integer;
+				L_x : in integer
+			);
+	end component;
 	
 	component pll IS
 		PORT
@@ -144,24 +179,29 @@ END component;
 	
 	signal pll_OUT_to_vga_controller_IN, dispEn : STD_LOGIC;
 	signal rowSignal, colSignal : INTEGER;
-	signal lives_sig : INTEGER := 2;
-	signal L_en, M_en, S_en : STD_LOGIC := '1';
-	signal L_xSig : INTEGER := 600;
-	signal L_ySig : INTEGER := 50;
-	signal M_xSig : INTEGER := 200;
-	signal M_ySig : INTEGER := 300;
-	signal S_xSig : INTEGER := 520;
-	signal S_ySig : INTEGER := 430;
+	signal lives_sig : INTEGER;
+	signal L_en, M_en, S_en : STD_LOGIC := '0';
+	signal L_xSig : INTEGER;-- := 400;
+	signal L_ySig : INTEGER := 300;
+	signal M_xSig : INTEGER;-- := 200;
+	signal M_ySig : INTEGER := 200;
+	signal S_xSig : INTEGER;-- := 520;
+	signal S_ySig : INTEGER := 50;
+	signal Lstart : INTEGER := 739;
+	signal Mstart : INTEGER := 689;
+	signal Sstart : INTEGER := 659;
 	signal c0_sig : std_logic;
 	signal ship_xSig,ship_ySig : integer;
+	--signal ship_xSig,ship_ySig : integer := 330;
+	signal ship_rst : std_logic;
 	--signal am_rst1, am_rst2, am_rst3 : std_logic;
 	
 	
 begin	
 
-L_en <= sw0;
-M_en <= sw1;
-S_en <= sw2;
+--L_en <= sw0;
+--M_en <= sw1;
+--S_en <= sw2;
 
 pll_inst : pll PORT MAP (
 		inclk0	 => pixel_clk_m,
@@ -172,10 +212,13 @@ pll_inst : pll PORT MAP (
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
 	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, reset_n_m, h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
 	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
-	U4	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw0, counter => open, x_pos => L_xSig);
-	U5	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw1, counter => open, x_pos => M_xSig);
-	U6	:	Alien_Movement port map(clk => pixel_clk_m, enable => sw2, counter => open, x_pos => S_xSig);
-	U7 : ship_controller port map(pixel_clk_m,not(key1),GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
+	U4	:	Alien_Movement port map(clk => pixel_clk_m, enable => L_en, counter => open, x_start => Lstart, x_pos => L_xSig);
+	U5	:	Alien_Movement port map(clk => pixel_clk_m, enable => M_en, counter => open, x_start => Mstart, x_pos => M_xSig);
+	U6	:	Alien_Movement port map(clk => pixel_clk_m, enable => S_en, counter => open, x_start => Sstart, x_pos => S_xSig);
+	U7 : ship_controller port map(pixel_clk_m,ship_rst,GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
+	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_m, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig);
+	U9 : alien_spawning port map(pixel_clk_m, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig);
+
 end vga_structural;
 
 

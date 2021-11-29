@@ -1,5 +1,5 @@
 Flow report for vga_top
-Fri Nov 19 15:42:57 2021
+Mon Nov 29 16:19:10 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 19 15:42:47 2021       ;
+; Flow Status                        ; Successful - Mon Nov 29 16:19:02 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; vga_top                                     ;
 ; Top-level Entity Name              ; vga_top                                     ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 1,438 / 49,760 ( 3 % )                      ;
-;     Total combinational functions  ; 1,366 / 49,760 ( 3 % )                      ;
-;     Dedicated logic registers      ; 494 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 494                                         ;
+; Total logic elements               ; 3,117 / 49,760 ( 6 % )                      ;
+;     Total combinational functions  ; 3,037 / 49,760 ( 6 % )                      ;
+;     Dedicated logic registers      ; 746 / 49,760 ( 1 % )                        ;
+; Total registers                    ; 746                                         ;
 ; Total pins                         ; 84 / 360 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/19/2021 15:41:12 ;
+; Start date & time ; 11/29/2021 16:17:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga_top             ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 190135462569242.163735807023820        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1095401231871.163822427226680          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ip/pll_inst.vhd                        ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4821 MB             ; 00:00:42                           ;
-; Fitter               ; 00:00:50     ; 1.0                     ; 5453 MB             ; 00:00:32                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4683 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.2                     ; 4800 MB             ; 00:00:06                           ;
-; Total                ; 00:01:37     ; --                      ; --                  ; 00:01:24                           ;
+; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4816 MB             ; 00:00:43                           ;
+; Fitter               ; 00:00:36     ; 1.1                     ; 5398 MB             ; 00:00:47                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4689 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.5                     ; 4812 MB             ; 00:00:09                           ;
+; Total                ; 00:01:13     ; --                      ; --                  ; 00:01:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,10 +110,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

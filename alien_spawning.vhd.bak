@@ -1,0 +1,34 @@
+library   ieee;
+use       ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity alien_spawning is
+
+	port(clk : in std_logic;
+			
+			S_y : out integer;
+			M_y : out integer;
+			L_y : out integer;
+		);
+end entity;
+
+architecture arch of alien_spawning is
+signal alien_num : integer := 0;
+signal counter : integer := 0;
+
+
+
+begin
+	
+	process(clk) is
+	begin
+		
+		if(rising_edge(clk)) then
+			if((counter >= 156250)) then
+				counter <= 0;
+			else
+				counter <= counter + 1;
+			end if;
+	end process;
+
+end architecture;
