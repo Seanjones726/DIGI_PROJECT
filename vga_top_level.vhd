@@ -11,6 +11,7 @@
 
 library   ieee;
 use       ieee.std_logic_1164.all;
+use work.bus_multiplexer_pkg.all;
 
 entity vga_top is
 	
@@ -136,7 +137,7 @@ architecture vga_structural of vga_top is
 	
 	component hw_image_generator is
 	
-		port(
+		PORT(
     disp_ena :  IN   STD_LOGIC;  --display enable ('1' = display time, '0' = blanking time)
     row      :  IN   INTEGER;    --row pixel coordinate
     column   :  IN   INTEGER;    --column pixel coordinate
@@ -154,7 +155,37 @@ architecture vga_structural of vga_top is
 	 Alien_M_x	:	IN INTEGER;
 	 Alien_M_y	:	IN INTEGER;
 	 Alien_S_x	:	IN INTEGER;
-	 Alien_S_y	:	IN INTEGER); 
+	 Alien_S_y	:	IN INTEGER;
+	 laser_1_x : IN integer;
+	 laser_2_x : IN integer;
+	 laser_3_x : IN integer;
+	 laser_4_x : IN integer;
+	 laser_5_x : IN integer;
+	 laser_6_x : IN integer;
+	 laser_7_x : IN integer;
+	 laser_8_x : IN integer;
+	 laser_1_y : IN integer;
+	 laser_2_y : IN integer;
+	 laser_3_y : IN integer;
+	 laser_4_y : IN integer;
+	 laser_5_y : IN integer;
+	 laser_6_y : IN integer;
+	 laser_7_y : IN integer;
+	 laser_8_y : IN integer;
+	 las1_en : IN integer;
+	 las2_en : IN integer;
+	 las3_en : IN integer;
+	 las4_en : IN integer;
+	 las5_en : IN integer;
+	 las6_en : IN integer;
+	 las7_en : IN integer;
+	 las8_en : IN integer;
+	 digit_1 : IN score_array;
+	 digit_2 : IN score_array;
+	 digit_3 : IN score_array
+	 
+	); 
+	 
 END component;
 
 	component ship_controller is
@@ -176,6 +207,45 @@ END component;
 				data_y      : BUFFER STD_LOGIC_VECTOR(15 downto 0);
 				data_z      : BUFFER STD_LOGIC_VECTOR(15 downto 0));
 		end component;
+		
+				component laser_controller is
+        port (  clock    : in std_logic;
+					 laser_1_x : out integer;
+					 laser_2_x : out integer;
+					 laser_3_x : out integer;
+					 laser_4_x : out integer;
+					 laser_5_x : out integer;
+					 laser_6_x : out integer;
+					 laser_7_x : out integer;
+					 laser_8_x : out integer;
+					 laser_1_y : out integer;
+					 laser_2_y : out integer;
+					 laser_3_y : out integer;
+					 laser_4_y : out integer;
+					 laser_5_y : out integer;
+					 laser_6_y : out integer;
+					 laser_7_y : out integer;
+					 laser_8_y : out integer;
+					 las1_en : out integer;
+					 las2_en : out integer;
+					 las3_en : out integer;
+					 las4_en : out integer;
+					 las5_en : out integer;
+					 las6_en : out integer;
+					 las7_en : out integer;
+					 las8_en : out integer;
+                ship_x: in integer;
+					 ship_y: in integer;
+					 fire: in std_logic);
+		end component;
+		
+		component score_keeper is
+		port(
+				score : in integer;
+				digit_1: out score_array;
+				digit_2: out score_array;
+				digit_3: out score_array);
+		end component;
 	
 	signal pll_OUT_to_vga_controller_IN, dispEn : STD_LOGIC;
 	signal rowSignal, colSignal : INTEGER;
@@ -195,6 +265,14 @@ END component;
 	--signal ship_xSig,ship_ySig : integer := 330;
 	signal ship_rst : std_logic;
 	--signal am_rst1, am_rst2, am_rst3 : std_logic;
+	signal laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x : INTEGER:= 0;
+	signal laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y : INTEGER:= 0;
+	signal laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en: INTEGER := 1;
+	signal pixel_clk_s : std_logic;
+	signal clock_state : std_logic := '0';
+	signal rst : std_logic;
+	signal score : integer := 444;
+	signal digit_1,digit_2,digit_3: score_array;
 	
 	
 begin	
@@ -202,6 +280,7 @@ begin
 --L_en <= sw0;
 --M_en <= sw1;
 --S_en <= sw2;
+rst <= not(reset_n_m);
 
 pll_inst : pll PORT MAP (
 		inclk0	 => pixel_clk_m,
@@ -210,14 +289,32 @@ pll_inst : pll PORT MAP (
 
 -- Just need 3 components for VGA system 
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
-	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, reset_n_m, h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
-	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig);
-	U4	:	Alien_Movement port map(clk => pixel_clk_m, enable => L_en, counter => open, x_start => Lstart, x_pos => L_xSig);
-	U5	:	Alien_Movement port map(clk => pixel_clk_m, enable => M_en, counter => open, x_start => Mstart, x_pos => M_xSig);
-	U6	:	Alien_Movement port map(clk => pixel_clk_m, enable => S_en, counter => open, x_start => Sstart, x_pos => S_xSig);
-	U7 : ship_controller port map(pixel_clk_m,ship_rst,GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
-	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_m, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig);
-	U9 : alien_spawning port map(pixel_clk_m, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig);
+	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, '1', h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
+	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,digit_1,digit_2,digit_3);
+	U4	:	Alien_Movement port map(clk => pixel_clk_s, enable => L_en, counter => open, x_start => Lstart, x_pos => L_xSig);
+	U5	:	Alien_Movement port map(clk => pixel_clk_s, enable => M_en, counter => open, x_start => Mstart, x_pos => M_xSig);
+	U6	:	Alien_Movement port map(clk => pixel_clk_s, enable => S_en, counter => open, x_start => Sstart, x_pos => S_xSig);
+	U7 : ship_controller port map(pixel_clk_s,ship_rst,GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
+	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_s, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig);
+	U9 : alien_spawning port map(pixel_clk_s, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig);
+	U10 : score_keeper port map(score,digit_1,digit_2,digit_3);
+	U11 : laser_controller port map(pixel_clk_s,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,ship_xSig,ship_ySig,not(key1));
+	
+	process(rst)
+	
+	begin
+	
+	if rising_edge(rst) then
+		clock_state <= not(clock_state);
+	end if;
+	
+	if(clock_state = '1') then
+		pixel_clk_s <= '1';
+	else
+		pixel_clk_s <= pixel_clk_m;
+	end if;
+		
+	end process;
 
 end vga_structural;
 

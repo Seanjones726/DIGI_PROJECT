@@ -76,6 +76,8 @@ set_location_assignment PIN_AB15 -to GSENSOR_SCLK
 set_location_assignment PIN_V11 -to GSENSOR_SDI
 set_location_assignment PIN_V12 -to GSENSOR_SDO
 set_location_assignment PIN_AB16 -to GSENSOR_CS_N
+set_global_assignment -name VHDL_FILE ip/score_keeper.vhd
+set_global_assignment -name VHDL_FILE ip/laser_Creator.vhd
 set_global_assignment -name VHDL_FILE ip/PRNG.vhd
 set_global_assignment -name VHDL_FILE ip/up_down_counter.vhd
 set_global_assignment -name SYSTEMVERILOG_FILE ip/spi.sv

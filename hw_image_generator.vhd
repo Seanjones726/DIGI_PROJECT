@@ -28,6 +28,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.bus_multiplexer_pkg.all;
 
 ENTITY hw_image_generator IS
   GENERIC(
@@ -36,7 +37,9 @@ ENTITY hw_image_generator IS
 	hud_line_bottom : INTEGER := 450;
 	L_size : INTEGER := 100;
 	M_size : INTEGER := 50;
-	S_size : INTEGER := 20
+	S_size : INTEGER := 10;
+	Laser_sizex : integer := 19;
+	Laser_sizey : integer := 1
 
 	);  
   PORT(
@@ -57,7 +60,34 @@ ENTITY hw_image_generator IS
 	 Alien_M_x	:	IN INTEGER;
 	 Alien_M_y	:	IN INTEGER;
 	 Alien_S_x	:	IN INTEGER;
-	 Alien_S_y	:	IN INTEGER
+	 Alien_S_y	:	IN INTEGER;
+	 laser_1_x : IN integer;
+	 laser_2_x : IN integer;
+	 laser_3_x : IN integer;
+	 laser_4_x : IN integer;
+	 laser_5_x : IN integer;
+	 laser_6_x : IN integer;
+	 laser_7_x : IN integer;
+	 laser_8_x : IN integer;
+	 laser_1_y : IN integer;
+	 laser_2_y : IN integer;
+	 laser_3_y : IN integer;
+	 laser_4_y : IN integer;
+	 laser_5_y : IN integer;
+	 laser_6_y : IN integer;
+	 laser_7_y : IN integer;
+	 laser_8_y : IN integer;
+	 las1_en : IN integer;
+	 las2_en : IN integer;
+	 las3_en : IN integer;
+	 las4_en : IN integer;
+	 las5_en : IN integer;
+	 las6_en : IN integer;
+	 las7_en : IN integer;
+	 las8_en : IN integer;
+	 digit_1 : IN score_array;
+	 digit_2 : IN score_array;
+	 digit_3 : IN score_array
 	 
 	); 
 	 
@@ -122,12 +152,66 @@ BEGIN
 			red <= (OTHERS => '0');
 			green <= (OTHERS => '1');
 			blue <= (OTHERS => '0');
-		else
+			
+		elsif(column >= laser_1_x) and (column <= (laser_1_x + Laser_sizex)) and (row >= laser_1_y) and (row <= (laser_1_y + Laser_sizey)) and (las1_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_2_x) and (column <= (laser_2_x + Laser_sizex) ) and (row >= laser_2_y) and (row <= (laser_2_y + Laser_sizey)) and (las2_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_3_x) and (column <= (laser_3_x + Laser_sizex) ) and (row >= laser_3_y) and (row <= (laser_3_y + Laser_sizey)) and (las3_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_4_x) and (column <= (laser_4_x + Laser_sizex) ) and (row >= laser_4_y) and (row <= (laser_4_y + Laser_sizey)) and (las4_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_5_x) and (column <= (laser_5_x + Laser_sizex) ) and (row >= laser_5_y) and (row <= (laser_5_y + Laser_sizey)) and (las5_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_6_x) and (column <= (laser_6_x + Laser_sizex) ) and (row >= laser_6_y) and (row <= (laser_6_y + Laser_sizey)) and (las6_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_7_x) and (column <= (laser_7_x + Laser_sizex) ) and (row >= laser_7_y) and (row <= (laser_7_y + Laser_sizey)) and (las7_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif(column >= laser_8_x) and (column <= (laser_8_x + Laser_sizex) ) and (row >= laser_8_y) and (row <= (laser_8_y + Laser_sizey)) and (las8_en = 1) then
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '0');
+			blue <= (OTHERS => '0');
+			
+		elsif ( digit_1(row,column - 100) = '1') and column >= 500 and column <= 507 and row >=0 and row <= 19 then 
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '1');
+			blue <= (OTHERS => '1');
+		elsif ( digit_2(row,column - 110) = '1') and column >= 510 and column <= 517 and row >=0 and row <= 19 then 
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '1');
+			blue <= (OTHERS => '1'); 
+		elsif ( digit_3(row,column - 120) = '1') and column >= 520 and column <= 527 and row >=0 and row <= 19 then 
+			red <= (OTHERS => '1');
+			green <= (OTHERS => '1');
+			blue <= (OTHERS => '1');
+		else 
 			red <= (OTHERS => '0');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
+		end if;
 		
-		END IF;
+	
 		
   END PROCESS triangle_generate;
   

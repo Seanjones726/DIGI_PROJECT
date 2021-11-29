@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at spi.sv(86): always construct contains both blocking and non-blocking assignments File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/spi.sv Line: 86
-Info (10281): Verilog HDL Declaration information at spi.sv(19): object "active" differs only in case from object "ACTIVE" in the same scope File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/spi.sv Line: 19
+Warning (10268): Verilog HDL information at spi.sv(86): always construct contains both blocking and non-blocking assignments File: C:/Users/Sean Jones/Desktop/GitHub/DIGI_PROJECT/ip/spi.sv Line: 86
+Info (10281): Verilog HDL Declaration information at spi.sv(19): object "active" differs only in case from object "ACTIVE" in the same scope File: C:/Users/Sean Jones/Desktop/GitHub/DIGI_PROJECT/ip/spi.sv Line: 19
