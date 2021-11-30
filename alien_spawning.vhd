@@ -9,12 +9,29 @@ entity alien_spawning is
 			S_status : buffer std_logic;
 			M_status : buffer std_logic;
 			L_status : buffer std_logic;			
-			S_y : out integer;
-			M_y : out integer;
-			L_y : out integer;
+			S_y : buffer integer;
+			M_y : buffer integer;
+			L_y : buffer integer;
 			S_x : in integer;
 			M_x : in integer;
-			L_x : in integer
+			L_x : in integer;
+			score : buffer integer;
+			laser_1_x : in integer;
+			laser_2_x : in integer;
+			laser_3_x : in integer;
+			laser_4_x : in integer;
+			laser_5_x : in integer;
+			laser_6_x : in integer;
+			laser_7_x : in integer;
+			laser_8_x : in integer;
+			laser_1_y : in integer;
+			laser_2_y : in integer;
+			laser_3_y : in integer;
+			laser_4_y : in integer;
+			laser_5_y : in integer;
+			laser_6_y : in integer;
+			laser_7_y : in integer;
+			laser_8_y : in integer
 		);
 end entity alien_spawning;
 
@@ -73,10 +90,10 @@ begin
 				elsif(M_status = '0') then
 					--M_y <= (((prng_val * 530) / 255) + 80);
 					M_y <= M_yVar;
-					M_yVar:= M_yVar + 200;
+					M_yVar:= M_yVar + 150;
 					
 					if(M_yVar > 400) then
-						M_yVar := M_yVar - 200;
+						M_yVar := M_yVar - 375;
 					elsif(M_yVar < 30) then
 						M_yVar := 30;
 					end if;
@@ -100,6 +117,84 @@ begin
 					S_status <= '1';
 				end if;
 				
+			end if;
+			
+			if(((laser_1_x + 19) >= (L_x - 100)) and (laser_1_y <= (L_y + 100)) and (laser_1_y >= L_y) and ((laser_1_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_2_x + 19) >= (L_x - 100)) and (laser_2_y <= (L_y + 100)) and (laser_2_y >= L_y) and ((laser_2_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_3_x + 19) >= (L_x - 100)) and (laser_3_y <= (L_y + 100)) and (laser_3_y >= L_y) and ((laser_3_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_4_x  + 19) >= (L_x - 100)) and (laser_4_y <= (L_y + 100)) and (laser_4_y >= L_y) and ((laser_4_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_5_x  + 19) >= (L_x - 100)) and (laser_5_y <= (L_y + 100)) and (laser_5_y >= L_y) and ((laser_5_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_6_x + 19) >= (L_x - 100)) and (laser_6_y <= (L_y + 100)) and (laser_6_y >= L_y) and ((laser_6_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_7_x + 19) >= (L_x - 100)) and (laser_7_y <= (L_y + 100)) and (laser_7_y >= L_y) and ((laser_7_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			elsif(((laser_8_x + 19) >= (L_x - 100)) and (laser_8_y <= (L_y + 100)) and (laser_8_y >= L_y) and ((laser_8_x + 19) <= L_x)) then
+				L_status <= '0';
+				score <= score + 1;
+			end if;
+			
+			if(((laser_1_x + 19) >= (M_x - 50)) and (laser_1_y <= (M_y + 50)) and (laser_1_y >= M_y) and ((laser_1_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_2_x + 19) >= (M_x - 50)) and (laser_2_y <= (M_y + 50)) and (laser_2_y >= M_y) and ((laser_2_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_3_x + 19) >= (M_x - 50)) and (laser_3_y <= (M_y + 50)) and (laser_3_y >= M_y) and ((laser_3_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_4_x  + 19) >= (M_x - 50)) and (laser_4_y <= (M_y + 50)) and (laser_4_y >= M_y) and ((laser_4_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_5_x  + 19) >= (M_x - 50)) and (laser_5_y <= (M_y + 50)) and (laser_5_y >= M_y) and ((laser_5_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_6_x + 19) >= (M_x - 50)) and (laser_6_y <= (M_y + 50)) and (laser_6_y >= M_y) and ((laser_6_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_7_x + 19) >= (M_x - 50)) and (laser_7_y <= (M_y + 50)) and (laser_7_y >= M_y) and ((laser_7_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			elsif(((laser_8_x + 19) >= (M_x - 50)) and (laser_8_y <= (M_y + 50)) and (laser_8_y >= M_y) and ((laser_8_x + 19) <= M_x)) then
+				M_status <= '0';
+				score <= score + 5;
+			end if;
+			
+			if(((laser_1_x + 19) >= (S_x - 20)) and (laser_1_y <= (S_y + 20)) and (laser_1_y >= S_y) and ((laser_1_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_2_x + 19) >= (S_x - 20)) and (laser_2_y <= (S_y + 20)) and (laser_2_y >= S_y) and ((laser_2_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_3_x + 19) >= (S_x - 20)) and (laser_3_y <= (S_y + 20)) and (laser_3_y >= S_y) and ((laser_3_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_4_x  + 19) >= (S_x - 20)) and (laser_4_y <= (S_y + 20)) and (laser_4_y >= S_y) and ((laser_4_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_5_x  + 19) >= (S_x - 20)) and (laser_5_y <= (S_y + 20)) and (laser_5_y >= S_y) and ((laser_5_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_6_x + 19) >= (S_x - 20)) and (laser_6_y <= (S_y + 20)) and (laser_6_y >= S_y) and ((laser_6_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_7_x + 19) >= (S_x - 20)) and (laser_7_y <= (S_y + 20)) and (laser_7_y >= S_y) and ((laser_7_x + 19) <= S_x)) then
+				S_status <= '0';
+				score <= score + 10;
+			elsif(((laser_8_x + 19) >= (S_x - 20)) and (laser_8_y <= (S_y + 20)) and (laser_8_y >= S_y) and ((laser_8_x + 19) <= S_x)) then
+				L_status <= '0';
+				score <= score + 10;
 			end if;
 			
 			if(S_x <= 1) then

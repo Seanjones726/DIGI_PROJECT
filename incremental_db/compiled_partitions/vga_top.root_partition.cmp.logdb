@@ -1,1 +1,5 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,score_keeper:U10|lpm_mult:Mult0|mult_ris:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,score_keeper:U10|lpm_mult:Mult0|mult_ris:auto_generated|mac_out4,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,score_keeper:U10|lpm_mult:Mult0|mult_ris:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,score_keeper:U10|lpm_mult:Mult0|mult_ris:auto_generated|mac_mult1,

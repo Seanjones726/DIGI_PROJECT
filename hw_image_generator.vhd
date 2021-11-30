@@ -153,42 +153,42 @@ BEGIN
 			green <= (OTHERS => '1');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_1_x) and (column <= (laser_1_x + Laser_sizex)) and (row >= laser_1_y) and (row <= (laser_1_y + Laser_sizey)) and (las1_en = 1) then
+		elsif(column >= laser_1_x) and (column <= (laser_1_x + Laser_sizex)) and (row >= laser_1_y) and (row <= (laser_1_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_2_x) and (column <= (laser_2_x + Laser_sizex) ) and (row >= laser_2_y) and (row <= (laser_2_y + Laser_sizey)) and (las2_en = 1) then
+		elsif(column >= laser_2_x) and (column <= (laser_2_x + Laser_sizex) ) and (row >= laser_2_y) and (row <= (laser_2_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_3_x) and (column <= (laser_3_x + Laser_sizex) ) and (row >= laser_3_y) and (row <= (laser_3_y + Laser_sizey)) and (las3_en = 1) then
+		elsif(column >= laser_3_x) and (column <= (laser_3_x + Laser_sizex) ) and (row >= laser_3_y) and (row <= (laser_3_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_4_x) and (column <= (laser_4_x + Laser_sizex) ) and (row >= laser_4_y) and (row <= (laser_4_y + Laser_sizey)) and (las4_en = 1) then
+		elsif(column >= laser_4_x) and (column <= (laser_4_x + Laser_sizex) ) and (row >= laser_4_y) and (row <= (laser_4_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_5_x) and (column <= (laser_5_x + Laser_sizex) ) and (row >= laser_5_y) and (row <= (laser_5_y + Laser_sizey)) and (las5_en = 1) then
+		elsif(column >= laser_5_x) and (column <= (laser_5_x + Laser_sizex) ) and (row >= laser_5_y) and (row <= (laser_5_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_6_x) and (column <= (laser_6_x + Laser_sizex) ) and (row >= laser_6_y) and (row <= (laser_6_y + Laser_sizey)) and (las6_en = 1) then
+		elsif(column >= laser_6_x) and (column <= (laser_6_x + Laser_sizex) ) and (row >= laser_6_y) and (row <= (laser_6_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_7_x) and (column <= (laser_7_x + Laser_sizex) ) and (row >= laser_7_y) and (row <= (laser_7_y + Laser_sizey)) and (las7_en = 1) then
+		elsif(column >= laser_7_x) and (column <= (laser_7_x + Laser_sizex) ) and (row >= laser_7_y) and (row <= (laser_7_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');
 			
-		elsif(column >= laser_8_x) and (column <= (laser_8_x + Laser_sizex) ) and (row >= laser_8_y) and (row <= (laser_8_y + Laser_sizey)) and (las8_en = 1) then
+		elsif(column >= laser_8_x) and (column <= (laser_8_x + Laser_sizex) ) and (row >= laser_8_y) and (row <= (laser_8_y + Laser_sizey)) then
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '0');
 			blue <= (OTHERS => '0');

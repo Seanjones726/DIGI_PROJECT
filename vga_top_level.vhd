@@ -117,12 +117,29 @@ architecture vga_structural of vga_top is
 				S_status : buffer std_logic;
 				M_status : buffer std_logic;
 				L_status : buffer std_logic;			
-				S_y : out integer;
-				M_y : out integer;
-				L_y : out integer;
+				S_y : buffer integer;
+				M_y : buffer integer;
+				L_y : buffer integer;
 				S_x : in integer;
 				M_x : in integer;
-				L_x : in integer
+				L_x : in integer;
+				score : buffer integer;
+				laser_1_x : in integer;
+				laser_2_x : in integer;
+				laser_3_x : in integer;
+				laser_4_x : in integer;
+				laser_5_x : in integer;
+				laser_6_x : in integer;
+				laser_7_x : in integer;
+				laser_8_x : in integer;
+				laser_1_y : in integer;
+				laser_2_y : in integer;
+				laser_3_y : in integer;
+				laser_4_y : in integer;
+				laser_5_y : in integer;
+				laser_6_y : in integer;
+				laser_7_y : in integer;
+				laser_8_y : in integer
 			);
 	end component;
 	
@@ -265,13 +282,15 @@ END component;
 	--signal ship_xSig,ship_ySig : integer := 330;
 	signal ship_rst : std_logic;
 	--signal am_rst1, am_rst2, am_rst3 : std_logic;
-	signal laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x : INTEGER:= 0;
-	signal laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y : INTEGER:= 0;
+	signal laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x : INTEGER range 0 to 900 := 800;
+	signal laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y : INTEGER range 0 to 900 := 800;
+	--signal laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x : INTEGER := 0;
+	--signal laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y : INTEGER := 0;
 	signal laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en: INTEGER := 1;
 	signal pixel_clk_s : std_logic;
 	signal clock_state : std_logic := '0';
 	signal rst : std_logic;
-	signal score : integer := 444;
+	signal score : integer := 0;
 	signal digit_1,digit_2,digit_3: score_array;
 	
 	
@@ -296,7 +315,7 @@ pll_inst : pll PORT MAP (
 	U6	:	Alien_Movement port map(clk => pixel_clk_s, enable => S_en, counter => open, x_start => Sstart, x_pos => S_xSig);
 	U7 : ship_controller port map(pixel_clk_s,ship_rst,GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
 	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_s, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig);
-	U9 : alien_spawning port map(pixel_clk_s, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig);
+	U9 : alien_spawning port map(pixel_clk_s, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig, score,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y);
 	U10 : score_keeper port map(score,digit_1,digit_2,digit_3);
 	U11 : laser_controller port map(pixel_clk_s,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,ship_xSig,ship_ySig,not(key1));
 	

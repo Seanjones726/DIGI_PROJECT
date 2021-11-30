@@ -141,29 +141,29 @@ laser_change : process(clock,start_laser,ship_x,ship_y)
 			
 			laser_8_x <= laser_8_x + 1;
 			
-			if(laser_1_x > 643) then 
-				laser_1_x <= 641;
+			if(laser_1_x > 850) then 
+				laser_1_x <= 849;
 			end if;
-			if(laser_2_x > 643) then 
-				laser_2_x <= 641;
+			if(laser_2_x > 850) then 
+				laser_2_x <= 849;
 			end if;
-			if(laser_3_x > 643) then 
-				laser_3_x <= 641;
+			if(laser_3_x > 850) then 
+				laser_3_x <= 849;
 			end if;
-			if(laser_4_x > 643) then 
-				laser_4_x <= 641;
+			if(laser_4_x > 850) then 
+				laser_4_x <= 849;
 			end if;
-			if(laser_5_x > 643) then 
-				laser_5_x <= 641;
+			if(laser_5_x > 850) then 
+				laser_5_x <= 849;
 			end if;
-			if(laser_6_x > 643) then 
-				laser_6_x <= 641;
+			if(laser_6_x > 850) then 
+				laser_6_x <= 849;
 			end if;
-			if(laser_7_x > 643) then 
-				laser_7_x <= 641;
+			if(laser_7_x > 850) then 
+				laser_7_x <= 849;
 			end if;
-			if(laser_8_x > 643) then 
-				laser_8_x <= 641;
+			if(laser_8_x > 850) then 
+				laser_8_x <= 849;
 			end if;
 			
 		else

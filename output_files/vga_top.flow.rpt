@@ -1,5 +1,5 @@
 Flow report for vga_top
-Mon Nov 29 17:47:25 2021
+Mon Nov 29 22:42:44 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 29 17:47:14 2021       ;
+; Flow Status                        ; Successful - Mon Nov 29 22:42:31 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; vga_top                                     ;
 ; Top-level Entity Name              ; vga_top                                     ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 5,007 / 49,760 ( 10 % )                     ;
-;     Total combinational functions  ; 4,886 / 49,760 ( 10 % )                     ;
-;     Dedicated logic registers      ; 1,337 / 49,760 ( 3 % )                      ;
-; Total registers                    ; 1337                                        ;
+; Total logic elements               ; 7,179 / 49,760 ( 14 % )                     ;
+;     Total combinational functions  ; 7,057 / 49,760 ( 14 % )                     ;
+;     Dedicated logic registers      ; 1,188 / 49,760 ( 2 % )                      ;
+; Total registers                    ; 1188                                        ;
 ; Total pins                         ; 84 / 360 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 4 / 288 ( 1 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2021 17:45:20 ;
+; Start date & time ; 11/29/2021 22:40:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga_top             ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 190135462569242.163822951910004        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1095401231871.163824723327824          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ip/pll_inst.vhd                        ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4835 MB             ; 00:00:45                           ;
-; Fitter               ; 00:01:13     ; 1.1                     ; 5473 MB             ; 00:01:29                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4691 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.4                     ; 4824 MB             ; 00:00:12                           ;
-; Total                ; 00:02:00     ; --                      ; --                  ; 00:02:30                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 4861 MB             ; 00:00:47                           ;
+; Fitter               ; 00:01:19     ; 1.2                     ; 5493 MB             ; 00:01:49                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4699 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:12     ; 1.6                     ; 4835 MB             ; 00:00:17                           ;
+; Total                ; 00:02:05     ; --                      ; --                  ; 00:02:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,10 +110,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-C3MAKV33  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Alexander        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
