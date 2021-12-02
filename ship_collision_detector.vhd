@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 use IEEE.numeric_std.all;
+use 	work.terrain_pkg.all;
 
 
 entity ship_collision_detector is
@@ -18,12 +19,16 @@ entity ship_collision_detector is
 			L_xMax		: in integer;
 			L_yMin		:	in integer;
 			ship_reset		:	buffer std_logic;
-			lives				:	out integer := 3);
+			lives				:	out integer := 3;
+			terrain_x : IN terrain_x_array;
+			terrain_y : IN terrain_y_array
+			);
 			
 end entity;
 
 architecture arch of ship_collision_detector is
 signal lives_sig : integer := 3;
+signal zero_lives_flag : std_logic := '0';
 begin
 	
 	--process(shipx, shipy, S_xMax, S_yMin, M_xMax, M_yMin, L_xMax, L_yMin) is
@@ -73,13 +78,51 @@ begin
 			ship_reset <= '1';
 			lives_sig <= lives_sig - 1;
 		end if;
-	
-	end if;
-	
-	if(ship_reset = '1') then
+		
+--		if(ship_y2 >= terrain_y(0) and ((ship_x1 <= terrain_x(0) and ship_x1 >= (terrain_x(0) - 64)) or (ship_x2 <= terrain_x(0) and ship_x2 >= (terrain_x(0) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(1) and ((ship_x1 <= terrain_x(1) and ship_x1 >= (terrain_x(1) - 64)) or (ship_x2 <= terrain_x(1) and ship_x2 >= (terrain_x(1) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(2) and ((ship_x1 <= terrain_x(2) and ship_x1 >= (terrain_x(2) - 64)) or (ship_x2 <= terrain_x(2) and ship_x2 >= (terrain_x(2) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(3) and ((ship_x1 <= terrain_x(3) and ship_x1 >= (terrain_x(3) - 64)) or (ship_x2 <= terrain_x(3) and ship_x2 >= (terrain_x(3) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(4) and ((ship_x1 <= terrain_x(4) and ship_x1 >= (terrain_x(4) - 64)) or (ship_x2 <= terrain_x(4) and ship_x2 >= (terrain_x(4) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(5) and ((ship_x1 <= terrain_x(5) and ship_x1 >= (terrain_x(5) - 64)) or (ship_x2 <= terrain_x(5) and ship_x2 >= (terrain_x(5) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(6) and ((ship_x1 <= terrain_x(6) and ship_x1 >= (terrain_x(6) - 64)) or (ship_x2 <= terrain_x(6) and ship_x2 >= (terrain_x(6) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(7) and ((ship_x1 <= terrain_x(7) and ship_x1 >= (terrain_x(7) - 64)) or (ship_x2 <= terrain_x(7) and ship_x2 >= (terrain_x(7) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(8) and ((ship_x1 <= terrain_x(8) and ship_x1 >= (terrain_x(8) - 64)) or (ship_x2 <= terrain_x(8) and ship_x2 >= (terrain_x(8) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(9) and ((ship_x1 <= terrain_x(9) and ship_x1 >= (terrain_x(9) - 64)) or (ship_x2 <= terrain_x(9) and ship_x2 >= (terrain_x(9) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		elsif(ship_y2 >= terrain_y(10) and ((ship_x1 <= terrain_x(10) and ship_x1 >= (terrain_x(10) - 64)) or (ship_x2 <= terrain_x(10) and ship_x2 >= (terrain_x(10) - 64)))) then
+--			ship_reset <= '1';
+--			lives_sig <= lives_sig - 1;
+--		end if;
+
+		if(ship_reset = '1') then
 		ship_reset <= '0';
 	end if;
 	
+	end if;
+	
+--	if(ship_reset = '1') then
+--		ship_reset <= '0';
+--	end if;
 	
 	end process;
 	lives <= lives_sig;

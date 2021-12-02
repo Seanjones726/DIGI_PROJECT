@@ -9,9 +9,9 @@ entity alien_spawning is
 			S_status : buffer std_logic;
 			M_status : buffer std_logic;
 			L_status : buffer std_logic;			
-			S_y : buffer integer;
-			M_y : buffer integer;
-			L_y : buffer integer;
+			S_y : buffer integer := 50;
+			M_y : buffer integer := 200;
+			L_y : buffer integer := 300;
 			S_x : in integer;
 			M_x : in integer;
 			L_x : in integer;

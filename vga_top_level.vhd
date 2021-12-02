@@ -12,6 +12,7 @@
 library   ieee;
 use       ieee.std_logic_1164.all;
 use work.bus_multiplexer_pkg.all;
+use 	work.terrain_pkg.all;
 
 entity vga_top is
 	
@@ -46,7 +47,9 @@ entity vga_top is
 		
 		red_m      :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --red magnitude output to DAC
 		green_m    :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --green magnitude output to DAC
-		blue_m     :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0') --blue magnitude output to DAC
+		blue_m     :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); --blue magnitude output to DAC
+		
+		sound	: OUT STD_LOGIC
 	
 	);
 	
@@ -107,7 +110,10 @@ architecture vga_structural of vga_top is
 				L_xMax		: in integer;
 				L_yMin		:	in integer;
 				ship_reset		:	buffer std_logic;
-				lives				:	out integer);
+				lives				:	out integer;
+				terrain_x : IN terrain_x_array;
+				terrain_y : IN terrain_y_array
+				);
 			
 	end component;
 	
@@ -199,7 +205,9 @@ architecture vga_structural of vga_top is
 	 las8_en : IN integer;
 	 digit_1 : IN score_array;
 	 digit_2 : IN score_array;
-	 digit_3 : IN score_array
+	 digit_3 : IN score_array;
+	 terrain_x : IN terrain_x_array;
+	 terrain_y : IN terrain_y_array
 	 
 	); 
 	 
@@ -263,6 +271,23 @@ END component;
 				digit_2: out score_array;
 				digit_3: out score_array);
 		end component;
+		
+		component terrain is
+			port(clk : in std_logic;
+				x_array : buffer terrain_x_array := (64,128,192,256,320,384,448,512,576,640,704);
+				y_array : buffer terrain_y_array := (others => 448) 
+			);
+		end component;
+		
+		component sound_system is
+			port(clk : in std_logic;
+					ship_crash : in std_logic;
+					invicible : in std_logic;
+					laser : in std_logic;
+					obj_destroy : in std_logic;
+					sound_out : buffer std_logic
+					);
+		end component;
 	
 	signal pll_OUT_to_vga_controller_IN, dispEn : STD_LOGIC;
 	signal rowSignal, colSignal : INTEGER;
@@ -293,6 +318,9 @@ END component;
 	signal score : integer := 0;
 	signal digit_1,digit_2,digit_3: score_array;
 	
+	signal tx_array : terrain_x_array := (64,128,192,256,320,384,448,512,576,640,704);
+	signal ty_array : terrain_y_array := (others => 448);
+	
 	
 begin	
 
@@ -309,16 +337,17 @@ pll_inst : pll PORT MAP (
 -- Just need 3 components for VGA system 
 	U1	:	vga_pll_25_175 port map(pixel_clk_m, pll_OUT_to_vga_controller_IN);
 	U2	:	vga_controller port map(pll_OUT_to_vga_controller_IN, '1', h_sync_m, v_sync_m, dispEn, colSignal, rowSignal, open, open);
-	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,digit_1,digit_2,digit_3);
+	U3	:	hw_image_generator port map(dispEn, rowSignal, colSignal, lives_sig, ship_xSig,ship_ySig, red_m, green_m, blue_m, L_en, M_en, S_en, L_xSig, L_ySig, M_xSig, M_ySig, S_xSig, S_ySig,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,digit_1,digit_2,digit_3, tx_array, ty_array);
 	U4	:	Alien_Movement port map(clk => pixel_clk_s, enable => L_en, counter => open, x_start => Lstart, x_pos => L_xSig);
 	U5	:	Alien_Movement port map(clk => pixel_clk_s, enable => M_en, counter => open, x_start => Mstart, x_pos => M_xSig);
 	U6	:	Alien_Movement port map(clk => pixel_clk_s, enable => S_en, counter => open, x_start => Sstart, x_pos => S_xSig);
 	U7 : ship_controller port map(pixel_clk_s,ship_rst,GSENSOR_CS_N,GSENSOR_SCLK,GSENSOR_SDI, GSENSOR_SDO,ship_xSig,ship_ySig, data_x, data_y, data_z);
-	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_s, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig);
+	U8 : ship_collision_detector port map(ship_xSig, ship_ySig, pixel_clk_s, S_xSig, S_ySig, M_xSig, M_ySig, L_xSig, L_ySig, ship_rst, lives_sig, tx_array, ty_array);
 	U9 : alien_spawning port map(pixel_clk_s, S_en, M_en, L_en, S_ySig, M_ySig, L_ySig, S_xSig, M_xSig, L_xSig, score,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y);
 	U10 : score_keeper port map(score,digit_1,digit_2,digit_3);
 	U11 : laser_controller port map(pixel_clk_s,laser1x,laser2x,laser3x,laser4x,laser5x,laser6x,laser7x,laser8x,laser1y,laser2y,laser3y,laser4y,laser5y,laser6y,laser7y,laser8y,laser1en,laser2en,laser3en,laser4en,laser5en,laser6en,laser7en,laser8en,ship_xSig,ship_ySig,not(key1));
-	
+	U12 : terrain port map(pixel_clk_s, tx_array, ty_array);
+	U13 : sound_system port map(pixel_clk_s, ship_rst, '0', '0', '0', sound);
 	process(rst)
 	
 	begin

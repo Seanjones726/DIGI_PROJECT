@@ -308,6 +308,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "sound",
+					"strict" : false
+				},
+				{
 					"name" : "GSENSOR_SDI",
 					"strict" : false
 				},

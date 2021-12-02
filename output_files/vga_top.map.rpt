@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_top
-Mon Nov 29 22:41:04 2021
+Thu Dec 02 15:41:39 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -33,22 +33,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  25. Parameter Settings for Inferred Entity Instance: score_keeper:U10|lpm_mult:Mult0
  26. altpll Parameter Settings by Entity Instance
  27. lpm_mult Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "laser_controller:U11"
- 29. Port Connectivity Checks: "alien_spawning:U9|PRNG:RNG"
- 30. Port Connectivity Checks: "alien_spawning:U9"
- 31. Port Connectivity Checks: "ship_controller:U7|updown_count:Y1"
- 32. Port Connectivity Checks: "ship_controller:U7|updown_count:X1"
- 33. Port Connectivity Checks: "ship_controller:U7|ADXL345_controller:U0"
- 34. Port Connectivity Checks: "Alien_Movement:U6"
- 35. Port Connectivity Checks: "Alien_Movement:U5"
- 36. Port Connectivity Checks: "Alien_Movement:U4"
- 37. Port Connectivity Checks: "hw_image_generator:U3"
- 38. Port Connectivity Checks: "vga_controller:U2"
- 39. Port Connectivity Checks: "pll:pll_inst"
- 40. Post-Synthesis Netlist Statistics for Top Partition
- 41. Elapsed Time Per Partition
- 42. Analysis & Synthesis Messages
- 43. Analysis & Synthesis Suppressed Messages
+ 28. Port Connectivity Checks: "sound_system:U13"
+ 29. Port Connectivity Checks: "laser_controller:U11"
+ 30. Port Connectivity Checks: "alien_spawning:U9|PRNG:RNG"
+ 31. Port Connectivity Checks: "alien_spawning:U9"
+ 32. Port Connectivity Checks: "ship_controller:U7|updown_count:Y1"
+ 33. Port Connectivity Checks: "ship_controller:U7|updown_count:X1"
+ 34. Port Connectivity Checks: "ship_controller:U7|ADXL345_controller:U0"
+ 35. Port Connectivity Checks: "Alien_Movement:U6"
+ 36. Port Connectivity Checks: "Alien_Movement:U5"
+ 37. Port Connectivity Checks: "Alien_Movement:U4"
+ 38. Port Connectivity Checks: "hw_image_generator:U3"
+ 39. Port Connectivity Checks: "vga_controller:U2"
+ 40. Port Connectivity Checks: "pll:pll_inst"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+ 44. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -74,16 +75,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 29 22:41:04 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 02 15:41:39 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; vga_top                                     ;
 ; Top-level Entity Name              ; vga_top                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 7,309                                       ;
-;     Total combinational functions  ; 7,053                                       ;
-;     Dedicated logic registers      ; 1,188                                       ;
-; Total registers                    ; 1188                                        ;
-; Total pins                         ; 84                                          ;
+; Total logic elements               ; 8,530                                       ;
+;     Total combinational functions  ; 8,177                                       ;
+;     Dedicated logic registers      ; 1,517                                       ;
+; Total registers                    ; 1517                                        ;
+; Total pins                         ; 85                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 4                                           ;
@@ -201,6 +202,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; ip/terrain.vhd                   ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd              ;         ;
 ; ip/score_keeper.vhd              ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd         ;         ;
 ; ip/laser_Creator.vhd             ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/laser_Creator.vhd        ;         ;
 ; ip/PRNG.vhd                      ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/PRNG.vhd                 ;         ;
@@ -217,6 +219,7 @@ refer to the applicable agreement for further details.
 ; ip/pll.vhd                       ; yes             ; User Wizard-Generated File   ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd                  ;         ;
 ; ship_collision_detector.vhd      ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd ;         ;
 ; alien_spawning.vhd               ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd          ;         ;
+; ip/sound_system.vhd              ; yes             ; User VHDL File               ; C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/sound_system.vhd         ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                       ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                   ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                  ;         ;
@@ -252,23 +255,23 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 7,309       ;
+; Estimated Total logic elements              ; 8,530       ;
 ;                                             ;             ;
-; Total combinational functions               ; 7053        ;
+; Total combinational functions               ; 8177        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1403        ;
-;     -- 3 input functions                    ; 2751        ;
-;     -- <=2 input functions                  ; 2899        ;
+;     -- 4 input functions                    ; 1584        ;
+;     -- 3 input functions                    ; 3252        ;
+;     -- <=2 input functions                  ; 3341        ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 2779        ;
-;     -- arithmetic mode                      ; 4274        ;
+;     -- normal mode                          ; 3191        ;
+;     -- arithmetic mode                      ; 4986        ;
 ;                                             ;             ;
-; Total registers                             ; 1188        ;
-;     -- Dedicated logic registers            ; 1188        ;
+; Total registers                             ; 1517        ;
+;     -- Dedicated logic registers            ; 1517        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 84          ;
+; I/O pins                                    ; 85          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 4           ;
 ;                                             ;             ;
@@ -276,8 +279,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; pixel_clk_s ;
-; Maximum fan-out                             ; 1016        ;
-; Total fan-out                               ; 23833       ;
+; Maximum fan-out                             ; 1345        ;
+; Total fan-out                               ; 27906       ;
 ; Average fan-out                             ; 2.83        ;
 +---------------------------------------------+-------------+
 
@@ -287,33 +290,36 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                    ; Entity Name             ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |vga_top                                        ; 7053 (2)            ; 1188 (1)                  ; 0           ; 0          ; 4            ; 0       ; 2         ; 84   ; 0            ; 0          ; |vga_top                                                                                                               ; vga_top                 ; work         ;
+; |vga_top                                        ; 8177 (3)            ; 1517 (1)                  ; 0           ; 0          ; 4            ; 0       ; 2         ; 85   ; 0            ; 0          ; |vga_top                                                                                                               ; vga_top                 ; work         ;
 ;    |Alien_Movement:U4|                          ; 93 (93)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U4                                                                                             ; Alien_Movement          ; work         ;
 ;    |Alien_Movement:U5|                          ; 92 (92)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U5                                                                                             ; Alien_Movement          ; work         ;
 ;    |Alien_Movement:U6|                          ; 92 (92)             ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|Alien_Movement:U6                                                                                             ; Alien_Movement          ; work         ;
-;    |alien_spawning:U9|                          ; 1785 (1785)         ; 254 (254)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|alien_spawning:U9                                                                                             ; alien_spawning          ; work         ;
-;    |hw_image_generator:U3|                      ; 1250 (1250)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|hw_image_generator:U3                                                                                         ; hw_image_generator      ; work         ;
+;    |alien_spawning:U9|                          ; 1784 (1784)         ; 254 (254)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|alien_spawning:U9                                                                                             ; alien_spawning          ; work         ;
+;    |hw_image_generator:U3|                      ; 1832 (1832)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|hw_image_generator:U3                                                                                         ; hw_image_generator      ; work         ;
 ;    |laser_controller:U11|                       ; 722 (722)           ; 404 (404)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|laser_controller:U11                                                                                          ; laser_controller        ; work         ;
-;    |score_keeper:U10|                           ; 1455 (173)          ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10                                                                                              ; score_keeper            ; work         ;
+;    |score_keeper:U10|                           ; 1441 (150)          ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10                                                                                              ; score_keeper            ; work         ;
 ;       |lpm_divide:Div0|                         ; 713 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div0                                                                              ; lpm_divide              ; work         ;
 ;          |lpm_divide_ibo:auto_generated|        ; 713 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div0|lpm_divide_ibo:auto_generated                                                ; lpm_divide_ibo          ; work         ;
 ;             |abs_divider_nbg:divider|           ; 713 (56)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div0|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider                        ; abs_divider_nbg         ; work         ;
 ;                |alt_u_div_2ie:divider|          ; 625 (625)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div0|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider|alt_u_div_2ie:divider  ; alt_u_div_2ie           ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|         ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div0|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9             ; work         ;
-;       |lpm_divide:Div1|                         ; 548 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1                                                                              ; lpm_divide              ; work         ;
-;          |lpm_divide_fbo:auto_generated|        ; 548 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo          ; work         ;
-;             |abs_divider_kbg:divider|           ; 548 (62)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;       |lpm_divide:Div1|                         ; 557 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1                                                                              ; lpm_divide              ; work         ;
+;          |lpm_divide_fbo:auto_generated|        ; 557 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo          ; work         ;
+;             |abs_divider_kbg:divider|           ; 557 (62)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                |alt_u_div_she:divider|          ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she           ; work         ;
-;                |lpm_abs_8b9:my_abs_num|         ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9             ; work         ;
+;                |lpm_abs_8b9:my_abs_num|         ; 46 (46)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9             ; work         ;
 ;       |lpm_mult:Mult0|                          ; 21 (0)              ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_mult:Mult0                                                                               ; lpm_mult                ; work         ;
 ;          |mult_ris:auto_generated|              ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |vga_top|score_keeper:U10|lpm_mult:Mult0|mult_ris:auto_generated                                                       ; mult_ris                ; work         ;
-;    |ship_collision_detector:U8|                 ; 867 (867)           ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_collision_detector:U8                                                                                    ; ship_collision_detector ; work         ;
-;    |ship_controller:U7|                         ; 640 (10)            ; 261 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7                                                                                            ; ship_controller         ; work         ;
-;       |ADXL345_controller:U0|                   ; 144 (0)             ; 133 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0                                                                      ; ADXL345_controller      ; work         ;
-;          |gsensor:U0|                           ; 144 (100)           ; 133 (95)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0                                                           ; gsensor                 ; work         ;
-;             |spi:u0|                            ; 44 (44)             ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0                                                    ; spi                     ; work         ;
-;       |updown_count:X1|                         ; 256 (256)           ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|updown_count:X1                                                                            ; updown_count            ; work         ;
+;    |ship_collision_detector:U8|                 ; 868 (868)           ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_collision_detector:U8                                                                                    ; ship_collision_detector ; work         ;
+;    |ship_controller:U7|                         ; 638 (10)            ; 261 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7                                                                                            ; ship_controller         ; work         ;
+;       |ADXL345_controller:U0|                   ; 143 (0)             ; 133 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0                                                                      ; ADXL345_controller      ; work         ;
+;          |gsensor:U0|                           ; 143 (100)           ; 133 (95)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0                                                           ; gsensor                 ; work         ;
+;             |spi:u0|                            ; 43 (43)             ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0                                                    ; spi                     ; work         ;
+;       |updown_count:X1|                         ; 255 (255)           ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|updown_count:X1                                                                            ; updown_count            ; work         ;
 ;       |updown_count:Y1|                         ; 230 (230)           ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|ship_controller:U7|updown_count:Y1                                                                            ; updown_count            ; work         ;
+;    |sound_system:U13|                           ; 122 (122)           ; 66 (66)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|sound_system:U13                                                                                              ; sound_system            ; work         ;
+;    |terrain:U12|                                ; 435 (434)           ; 263 (255)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|terrain:U12                                                                                                   ; terrain                 ; work         ;
+;       |PRNG:U1|                                 ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|terrain:U12|PRNG:U1                                                                                           ; PRNG                    ; work         ;
 ;    |vga_controller:U2|                          ; 55 (55)             ; 43 (43)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_controller:U2                                                                                             ; vga_controller          ; work         ;
 ;    |vga_pll_25_175:U1|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_pll_25_175:U1                                                                                             ; vga_pll_25_175          ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |vga_top|vga_pll_25_175:U1|altpll:altpll_component                                                                     ; altpll                  ; work         ;
@@ -377,26 +383,48 @@ Encoding Type:  One-Hot
 ; alien_spawning:U9|S_y[0]                                           ; Stuck at GND due to stuck port data_in            ;
 ; alien_spawning:U9|S_y[1]                                           ; Stuck at VCC due to stuck port data_in            ;
 ; alien_spawning:U9|L_y[0]                                           ; Stuck at GND due to stuck port data_in            ;
+; terrain:U12|\CHECK:y_temp[8]                                       ; Merged with terrain:U12|y_val[8]                  ;
+; terrain:U12|\CHECK:y_temp[7]                                       ; Merged with terrain:U12|y_val[7]                  ;
+; terrain:U12|\CHECK:y_temp[6]                                       ; Merged with terrain:U12|y_val[6]                  ;
+; terrain:U12|\CHECK:y_temp[5]                                       ; Merged with terrain:U12|y_val[5]                  ;
+; terrain:U12|\CHECK:y_temp[4]                                       ; Merged with terrain:U12|y_val[4]                  ;
+; terrain:U12|\CHECK:y_temp[3]                                       ; Merged with terrain:U12|y_val[3]                  ;
+; terrain:U12|\CHECK:y_temp[2]                                       ; Merged with terrain:U12|y_val[2]                  ;
+; terrain:U12|\CHECK:y_temp[1]                                       ; Merged with terrain:U12|y_val[1]                  ;
+; terrain:U12|\CHECK:y_temp[0]                                       ; Merged with terrain:U12|y_val[0]                  ;
 ; laser_controller:U11|start_laser                                   ; Merged with laser_controller:U11|reset_counter[0] ;
+; terrain:U12|\CHECK:y_temp[30,31]                                   ; Stuck at GND due to stuck port data_in            ;
 ; vga_controller:U2|row[9]                                           ; Stuck at GND due to stuck port data_in            ;
 ; ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|state~2 ; Lost fanout                                       ;
 ; ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|state~3 ; Lost fanout                                       ;
-; Total Number of Removed Registers = 112                            ;                                                   ;
+; terrain:U12|\CHECK:y_temp[9..29]                                   ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 144                            ;                                                   ;
 +--------------------------------------------------------------------+---------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                      ;
-+-----------------------------+---------------------------+----------------------------------------+
-; Register name               ; Reason for Removal        ; Registers Removed due to This Register ;
-+-----------------------------+---------------------------+----------------------------------------+
-; alien_spawning:U9|S_yVar[0] ; Stuck at GND              ; alien_spawning:U9|S_y[0]               ;
-;                             ; due to stuck port data_in ;                                        ;
-; alien_spawning:U9|S_yVar[1] ; Stuck at VCC              ; alien_spawning:U9|S_y[1]               ;
-;                             ; due to stuck port data_in ;                                        ;
-; alien_spawning:U9|L_yVar[0] ; Stuck at GND              ; alien_spawning:U9|L_y[0]               ;
-;                             ; due to stuck port data_in ;                                        ;
-+-----------------------------+---------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++-------------------------------+---------------------------+---------------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                        ;
++-------------------------------+---------------------------+---------------------------------------------------------------+
+; terrain:U12|\CHECK:y_temp[31] ; Stuck at GND              ; terrain:U12|\CHECK:y_temp[9], terrain:U12|\CHECK:y_temp[10],  ;
+;                               ; due to stuck port data_in ; terrain:U12|\CHECK:y_temp[11], terrain:U12|\CHECK:y_temp[12], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[13], terrain:U12|\CHECK:y_temp[14], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[15], terrain:U12|\CHECK:y_temp[16], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[17], terrain:U12|\CHECK:y_temp[18], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[19], terrain:U12|\CHECK:y_temp[20], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[21], terrain:U12|\CHECK:y_temp[22], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[23], terrain:U12|\CHECK:y_temp[24], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[25], terrain:U12|\CHECK:y_temp[26], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[27], terrain:U12|\CHECK:y_temp[28], ;
+;                               ;                           ; terrain:U12|\CHECK:y_temp[29]                                 ;
+; alien_spawning:U9|S_yVar[0]   ; Stuck at GND              ; alien_spawning:U9|S_y[0]                                      ;
+;                               ; due to stuck port data_in ;                                                               ;
+; alien_spawning:U9|S_yVar[1]   ; Stuck at VCC              ; alien_spawning:U9|S_y[1]                                      ;
+;                               ; due to stuck port data_in ;                                                               ;
+; alien_spawning:U9|L_yVar[0]   ; Stuck at GND              ; alien_spawning:U9|L_y[0]                                      ;
+;                               ; due to stuck port data_in ;                                                               ;
++-------------------------------+---------------------------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -404,12 +432,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1188  ;
-; Number of registers using Synchronous Clear  ; 96    ;
-; Number of registers using Synchronous Load   ; 287   ;
-; Number of registers using Asynchronous Clear ; 225   ;
+; Total registers                              ; 1517  ;
+; Number of registers using Synchronous Clear  ; 129   ;
+; Number of registers using Synchronous Load   ; 363   ;
+; Number of registers using Asynchronous Clear ; 232   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 937   ;
+; Number of registers using Clock Enable       ; 1102  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -419,20 +447,26 @@ Encoding Type:  One-Hot
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
+; vga_controller:U2|row[0]                        ; 57      ;
 ; vga_controller:U2|row[31]                       ; 23      ;
 ; Alien_Movement:U6|temp[9]                       ; 15      ;
 ; Alien_Movement:U6|temp[7]                       ; 15      ;
 ; Alien_Movement:U6|temp[4]                       ; 15      ;
 ; Alien_Movement:U6|temp[1]                       ; 25      ;
 ; Alien_Movement:U6|temp[0]                       ; 24      ;
-; vga_controller:U2|column[0]                     ; 58      ;
+; vga_controller:U2|column[0]                     ; 81      ;
 ; vga_controller:U2|column[31]                    ; 21      ;
-; vga_controller:U2|row[0]                        ; 35      ;
 ; Alien_Movement:U5|temp[9]                       ; 14      ;
 ; Alien_Movement:U5|temp[7]                       ; 14      ;
 ; Alien_Movement:U5|temp[5]                       ; 14      ;
 ; Alien_Movement:U5|temp[4]                       ; 14      ;
 ; Alien_Movement:U5|temp[0]                       ; 24      ;
+; Alien_Movement:U4|temp[9]                       ; 14      ;
+; Alien_Movement:U4|temp[7]                       ; 14      ;
+; Alien_Movement:U4|temp[6]                       ; 14      ;
+; Alien_Movement:U4|temp[5]                       ; 14      ;
+; Alien_Movement:U4|temp[1]                       ; 24      ;
+; Alien_Movement:U4|temp[0]                       ; 24      ;
 ; ship_controller:U7|updown_count:X1|x_pos_sig[3] ; 13      ;
 ; ship_controller:U7|updown_count:X1|x_pos_sig[1] ; 18      ;
 ; ship_controller:U7|updown_count:Y1|x_pos_sig[8] ; 15      ;
@@ -441,12 +475,6 @@ Encoding Type:  One-Hot
 ; ship_controller:U7|updown_count:Y1|x_pos_sig[2] ; 15      ;
 ; ship_collision_detector:U8|lives_sig[0]         ; 3       ;
 ; ship_collision_detector:U8|lives_sig[1]         ; 3       ;
-; Alien_Movement:U4|temp[9]                       ; 14      ;
-; Alien_Movement:U4|temp[7]                       ; 14      ;
-; Alien_Movement:U4|temp[6]                       ; 14      ;
-; Alien_Movement:U4|temp[5]                       ; 14      ;
-; Alien_Movement:U4|temp[1]                       ; 24      ;
-; Alien_Movement:U4|temp[0]                       ; 24      ;
 ; ship_controller:U7|updown_count:X1|counter[14]  ; 3       ;
 ; ship_controller:U7|updown_count:X1|counter[4]   ; 3       ;
 ; ship_controller:U7|updown_count:X1|counter[15]  ; 4       ;
@@ -459,7 +487,20 @@ Encoding Type:  One-Hot
 ; ship_controller:U7|updown_count:Y1|counter[9]   ; 4       ;
 ; ship_controller:U7|updown_count:Y1|counter[8]   ; 4       ;
 ; ship_controller:U7|updown_count:Y1|counter[6]   ; 4       ;
-; Total number of inverted registers = 40         ;         ;
+; terrain:U12|prng_rst                            ; 119     ;
+; terrain:U12|y_val[8]                            ; 2       ;
+; terrain:U12|y_val[7]                            ; 2       ;
+; terrain:U12|y_val[6]                            ; 2       ;
+; terrain:U12|\CHECK:y_start[6]                   ; 13      ;
+; terrain:U12|PRNG:U1|Q7                          ; 4       ;
+; terrain:U12|PRNG:U1|Q0                          ; 2       ;
+; terrain:U12|PRNG:U1|Q1                          ; 2       ;
+; terrain:U12|PRNG:U1|Q2                          ; 2       ;
+; terrain:U12|PRNG:U1|Q3                          ; 3       ;
+; terrain:U12|PRNG:U1|Q4                          ; 4       ;
+; terrain:U12|PRNG:U1|Q5                          ; 4       ;
+; terrain:U12|PRNG:U1|Q6                          ; 3       ;
+; Total number of inverted registers = 53         ;         ;
 +-------------------------------------------------+---------+
 
 
@@ -468,33 +509,70 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|clk_counter[3] ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|M_yVar[8]                                               ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|S_yVar[12]                                              ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|L_yVar[18]                                              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|clk_counter[0] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[10][6]                                                ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[9][2]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[8][3]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[7][1]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[6][0]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[5][8]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[4][7]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[3][3]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[2][7]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[1][8]                                                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |vga_top|terrain:U12|y_array[0][8]                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |vga_top|sound_system:U13|timer_crash[27]                                          ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|y_val[1]                                                      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|M_yVar[25]                                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|S_yVar[10]                                              ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|L_yVar[26]                                              ;
 ; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |vga_top|alien_spawning:U9|score[17]                                               ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_8_x[14]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_7_x[13]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_6_x[15]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_5_x[13]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_4_x[17]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_3_x[1]                                         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_2_x[22]                                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_1_x[27]                                        ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|counter[31]                            ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|counter[1]                             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_8_x[23]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_7_x[20]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_6_x[27]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_5_x[8]                                         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_4_x[12]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_3_x[17]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_2_x[24]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |vga_top|laser_controller:U11|laser_1_x[5]                                         ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|counter[28]                            ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|counter[0]                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[10][0]                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[10][7]                                                ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[9][4]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[9][6]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[8][0]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[8][6]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[7][3]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[7][9]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[6][0]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[6][9]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[5][3]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[5][8]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[4][4]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[4][7]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[3][3]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[3][9]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[2][5]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[2][9]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[1][3]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[1][9]                                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[0][5]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|x_array[0][9]                                                 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|count[2]       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|idlecount[0]   ;
-; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|x_pos_sig[24]                          ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|x_pos_sig[29]                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|counter[4]                             ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|x_pos_sig[30]                          ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|x_pos_sig[24]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |vga_top|terrain:U12|y_val[6]                                                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|counter[10]                            ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|counter[14]                            ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|x_pos_sig[5]                           ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:Y1|x_pos_sig[3]                           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga_top|ship_controller:U7|updown_count:X1|x_pos_sig[1]                           ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_top|vga_controller:U2|v_count                                                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|spi:u0|Selector3      ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_top|hw_image_generator:U3|green[0]                                            ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|Selector0             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_top|hw_image_generator:U3|blue[0]                                             ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |vga_top|ship_controller:U7|ADXL345_controller:U0|gsensor:U0|Selector2             ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 21 LEs               ; 15 LEs                 ; No         ; |vga_top|hw_image_generator:U3|red[0]                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 
 
@@ -1445,6 +1523,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+---------------------------------+
 
 
++-----------------------------------------------+
+; Port Connectivity Checks: "sound_system:U13"  ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; invicible   ; Input ; Info     ; Stuck at GND ;
+; laser       ; Input ; Info     ; Stuck at GND ;
+; obj_destroy ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "laser_controller:U11"                                                                            ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1655,32 +1744,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 84                          ;
-; cycloneiii_ff         ; 1188                        ;
-;     CLR               ; 64                          ;
-;     ENA               ; 489                         ;
-;     ENA CLR           ; 161                         ;
-;     ENA SLD           ; 287                         ;
-;     SCLR              ; 96                          ;
-;     plain             ; 91                          ;
+; boundary_port         ; 85                          ;
+; cycloneiii_ff         ; 1517                        ;
+;     CLR               ; 72                          ;
+;     ENA               ; 591                         ;
+;     ENA CLR           ; 160                         ;
+;     ENA SCLR          ; 32                          ;
+;     ENA SLD           ; 319                         ;
+;     SCLR              ; 97                          ;
+;     SLD               ; 44                          ;
+;     plain             ; 202                         ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 7053                        ;
-;     arith             ; 4274                        ;
+; cycloneiii_lcell_comb ; 8177                        ;
+;     arith             ; 4986                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 1782                        ;
-;         3 data inputs ; 2490                        ;
-;     normal            ; 2779                        ;
-;         0 data inputs ; 75                          ;
-;         1 data inputs ; 78                          ;
-;         2 data inputs ; 962                         ;
-;         3 data inputs ; 261                         ;
-;         4 data inputs ; 1403                        ;
+;         2 data inputs ; 2094                        ;
+;         3 data inputs ; 2890                        ;
+;     normal            ; 3191                        ;
+;         0 data inputs ; 87                          ;
+;         1 data inputs ; 103                         ;
+;         2 data inputs ; 1055                        ;
+;         3 data inputs ; 362                         ;
+;         4 data inputs ; 1584                        ;
 ; cycloneiii_mac_mult   ; 2                           ;
 ; cycloneiii_mac_out    ; 2                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 110.20                      ;
-; Average LUT depth     ; 26.38                       ;
+; Max LUT depth         ; 108.30                      ;
+; Average LUT depth     ; 23.25                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1689,7 +1780,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:12     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -1699,10 +1790,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 29 22:40:33 2021
+    Info: Processing started: Thu Dec 02 15:41:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_top -c vga_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 3 design units, including 1 entities, in source file ip/terrain.vhd
+    Info (12022): Found design unit 1: terrain_pkg File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd Line: 5
+    Info (12022): Found design unit 2: terrain-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd Line: 46
+    Info (12023): Found entity 1: terrain File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd Line: 15
 Info (12021): Found 3 design units, including 1 entities, in source file ip/score_keeper.vhd
     Info (12022): Found design unit 1: bus_multiplexer_pkg File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 5
     Info (12022): Found design unit 2: score_keeper-bh File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 23
@@ -1727,8 +1822,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file ip/adxl
     Info (12022): Found design unit 1: ADXL345_controller-ADXL345_controller_structural File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ADXL345_controller.vhd Line: 25
     Info (12023): Found entity 1: ADXL345_controller File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ADXL345_controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
-    Info (12022): Found design unit 1: vga_top-vga_structural File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 55
-    Info (12023): Found entity 1: vga_top File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 16
+    Info (12022): Found design unit 1: vga_top-vga_structural File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 58
+    Info (12023): Found entity 1: vga_top File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file vga_pll_25_175.vhd
     Info (12022): Found design unit 1: vga_pll_25_175-SYN File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 51
     Info (12023): Found entity 1: vga_pll_25_175 File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 42
@@ -1736,8 +1831,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file vga_con
     Info (12022): Found design unit 1: vga_controller-behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 52
     Info (12023): Found entity 1: vga_controller File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_controller.vhd Line: 28
 Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
-    Info (12022): Found design unit 1: hw_image_generator-behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 96
-    Info (12023): Found entity 1: hw_image_generator File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 33
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 99
+    Info (12023): Found entity 1: hw_image_generator File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 34
 Info (12021): Found 2 design units, including 1 entities, in source file ip/alien_movement.vhd
     Info (12022): Found design unit 1: Alien_Movement-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 15
     Info (12023): Found entity 1: Alien_Movement File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 5
@@ -1751,19 +1846,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file project
     Info (12022): Found design unit 1: project_tb-tb File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/project_tb.vhd Line: 7
     Info (12023): Found entity 1: project_tb File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/project_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ship_collision_detector.vhd
-    Info (12022): Found design unit 1: ship_collision_detector-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 25
-    Info (12023): Found entity 1: ship_collision_detector File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 6
+    Info (12022): Found design unit 1: ship_collision_detector-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 29
+    Info (12023): Found entity 1: ship_collision_detector File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file alien_spawning.vhd
     Info (12022): Found design unit 1: alien_spawning-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd Line: 38
     Info (12023): Found entity 1: alien_spawning File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ip/sound_system.vhd
+    Info (12022): Found design unit 1: sound_system-arch File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/sound_system.vhd Line: 16
+    Info (12023): Found entity 1: sound_system File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/sound_system.vhd Line: 5
 Info (12127): Elaborating entity "vga_top" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(277): used explicit default value for signal "Lstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 277
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(278): used explicit default value for signal "Mstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 278
-Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(279): used explicit default value for signal "Sstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 279
-Warning (10036): Verilog HDL or VHDL warning at vga_top_level.vhd(280): object "c0_sig" assigned a value but never read File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 280
-Warning (10492): VHDL Process Statement warning at vga_top_level.vhd(330): signal "clock_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 330
-Warning (10492): VHDL Process Statement warning at vga_top_level.vhd(333): signal "pixel_clk_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 333
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 304
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(302): used explicit default value for signal "Lstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 302
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(303): used explicit default value for signal "Mstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 303
+Warning (10540): VHDL Signal Declaration warning at vga_top_level.vhd(304): used explicit default value for signal "Sstart" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 304
+Warning (10036): Verilog HDL or VHDL warning at vga_top_level.vhd(305): object "c0_sig" assigned a value but never read File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 305
+Warning (10492): VHDL Process Statement warning at vga_top_level.vhd(359): signal "clock_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 359
+Warning (10492): VHDL Process Statement warning at vga_top_level.vhd(362): signal "pixel_clk_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 362
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 332
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/pll.vhd Line: 133
@@ -1824,7 +1922,7 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_pll_25_175" for hierarchy "vga_pll_25_175:U1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 310
+Info (12128): Elaborating entity "vga_pll_25_175" for hierarchy "vga_pll_25_175:U1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 338
 Info (12128): Elaborating entity "altpll" for hierarchy "vga_pll_25_175:U1|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "vga_pll_25_175:U1|altpll:altpll_component" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
 Info (12133): Instantiated megafunction "vga_pll_25_175:U1|altpll:altpll_component" with the following parameter: File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_pll_25_175.vhd Line: 133
@@ -1885,67 +1983,89 @@ Info (12133): Instantiated megafunction "vga_pll_25_175:U1|altpll:altpll_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/vga_pll_25_175_altpll.v
     Info (12023): Found entity 1: vga_pll_25_175_altpll File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/vga_pll_25_175_altpll.v Line: 29
 Info (12128): Elaborating entity "vga_pll_25_175_altpll" for hierarchy "vga_pll_25_175:U1|altpll:altpll_component|vga_pll_25_175_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:U2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 311
-Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:U3" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 312
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(102): used initial value expression for variable "triangle_x" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(102): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(102): signal "triangle_start_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 102
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(103): used initial value expression for variable "triangle_y" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 103
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(103): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 103
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(104): used initial value expression for variable "triangle_lives_x1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 104
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(105): used initial value expression for variable "triangle_lives_y1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 105
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(106): used initial value expression for variable "triangle_lives_x2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 106
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(107): used initial value expression for variable "triangle_lives_y2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 107
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(108): used initial value expression for variable "triangle_lives_x3" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 108
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(109): used initial value expression for variable "triangle_lives_y3" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 109
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(110): used initial value expression for variable "L_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(110): signal "Alien_L_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 110
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(111): used initial value expression for variable "L_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 111
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(111): signal "Alien_L_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 111
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(112): used initial value expression for variable "M_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(112): signal "Alien_M_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 112
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(113): used initial value expression for variable "M_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 113
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(113): signal "Alien_M_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 113
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(114): used initial value expression for variable "S_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(114): signal "Alien_S_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 114
-Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(115): used initial value expression for variable "S_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(115): signal "Alien_S_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(127): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(131): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 131
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(135): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(139): signal "triangle_start_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(139): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(143): signal "Alien_L_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 143
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(143): signal "Alien_L_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 143
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(143): signal "Alien_L_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 143
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(147): signal "Alien_M_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(147): signal "Alien_M_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(147): signal "Alien_M_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(151): signal "Alien_S_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(151): signal "Alien_S_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(151): signal "Alien_S_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(156): signal "laser_1_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(156): signal "laser_1_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(161): signal "laser_2_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(161): signal "laser_2_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(166): signal "laser_3_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 166
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(166): signal "laser_3_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 166
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(171): signal "laser_4_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 171
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(171): signal "laser_4_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 171
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(176): signal "laser_5_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(176): signal "laser_5_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(181): signal "laser_6_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(181): signal "laser_6_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(186): signal "laser_7_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(186): signal "laser_7_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(191): signal "laser_8_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 191
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(191): signal "laser_8_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 191
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(196): signal "digit_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 196
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(200): signal "digit_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 200
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(204): signal "digit_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 204
-Info (12128): Elaborating entity "Alien_Movement" for hierarchy "Alien_Movement:U4" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 313
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:U2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 339
+Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:U3" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 340
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(105): used initial value expression for variable "triangle_x" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(105): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(105): signal "triangle_start_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 105
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(106): used initial value expression for variable "triangle_y" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(106): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 106
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(107): used initial value expression for variable "triangle_lives_x1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 107
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(108): used initial value expression for variable "triangle_lives_y1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 108
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(109): used initial value expression for variable "triangle_lives_x2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 109
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(110): used initial value expression for variable "triangle_lives_y2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 110
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(111): used initial value expression for variable "triangle_lives_x3" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 111
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(112): used initial value expression for variable "triangle_lives_y3" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 112
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(113): used initial value expression for variable "L_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(113): signal "Alien_L_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 113
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(114): used initial value expression for variable "L_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(114): signal "Alien_L_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 114
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(115): used initial value expression for variable "M_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(115): signal "Alien_M_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 115
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(116): used initial value expression for variable "M_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(116): signal "Alien_M_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 116
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(117): used initial value expression for variable "S_xBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(117): signal "Alien_S_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 117
+Warning (10542): VHDL Variable Declaration warning at hw_image_generator.vhd(118): used initial value expression for variable "S_yBound" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(118): signal "Alien_S_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(130): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(134): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(138): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(142): signal "triangle_start_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(142): signal "triangle_start_v" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(146): signal "Alien_L_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(146): signal "Alien_L_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(146): signal "Alien_L_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(150): signal "Alien_M_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(150): signal "Alien_M_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(150): signal "Alien_M_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(154): signal "Alien_S_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(154): signal "Alien_S_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(154): signal "Alien_S_en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(159): signal "laser_1_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(159): signal "laser_1_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(164): signal "laser_2_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(164): signal "laser_2_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(169): signal "laser_3_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 169
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(169): signal "laser_3_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 169
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(174): signal "laser_4_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(174): signal "laser_4_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(179): signal "laser_5_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 179
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(179): signal "laser_5_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 179
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(184): signal "laser_6_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(184): signal "laser_6_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(189): signal "laser_7_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(189): signal "laser_7_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(194): signal "laser_8_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(194): signal "laser_8_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(199): signal "digit_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 199
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(203): signal "digit_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 203
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(207): signal "digit_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(215): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 215
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(215): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 215
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(219): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 219
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(219): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 219
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(223): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 223
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(223): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 223
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(227): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 227
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(227): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 227
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(231): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 231
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(231): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 231
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(235): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 235
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(235): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 235
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(239): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 239
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(239): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 239
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(243): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 243
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(243): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 243
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(247): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 247
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(247): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 247
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(251): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 251
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(251): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 251
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(255): signal "terrain_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 255
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(255): signal "terrain_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/hw_image_generator.vhd Line: 255
+Info (12128): Elaborating entity "Alien_Movement" for hierarchy "Alien_Movement:U4" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 341
 Warning (10492): VHDL Process Statement warning at Alien_Movement.vhd(39): signal "x_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 39
-Info (12128): Elaborating entity "ship_controller" for hierarchy "ship_controller:U7" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 316
+Info (12128): Elaborating entity "ship_controller" for hierarchy "ship_controller:U7" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 344
 Warning (10492): VHDL Process Statement warning at ship_movement.vhd(65): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ship_movement.vhd Line: 65
 Warning (10492): VHDL Process Statement warning at ship_movement.vhd(72): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ship_movement.vhd Line: 72
 Warning (10492): VHDL Process Statement warning at ship_movement.vhd(89): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ship_movement.vhd Line: 89
@@ -1964,29 +2084,28 @@ Warning (10230): Verilog HDL assignment warning at spi.sv(156): truncated value 
 Warning (10230): Verilog HDL assignment warning at spi.sv(204): truncated value with size 64 to match size of target (4) File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/spi.sv Line: 204
 Info (12128): Elaborating entity "updown_count" for hierarchy "ship_controller:U7|updown_count:X1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/ship_movement.vhd Line: 55
 Warning (10492): VHDL Process Statement warning at up_down_counter.vhd(24): signal "origin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 24
-Info (12128): Elaborating entity "ship_collision_detector" for hierarchy "ship_collision_detector:U8" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 317
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(31): used initial value expression for variable "ship_x1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(31): signal "shipx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 31
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(32): used initial value expression for variable "ship_y1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 32
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(32): signal "shipy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 32
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(33): used initial value expression for variable "ship_x2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(33): signal "shipx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 33
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(34): used initial value expression for variable "ship_y2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(34): signal "shipy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 34
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(35): used initial value expression for variable "S_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(35): signal "S_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 35
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(36): used initial value expression for variable "S_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(36): signal "S_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 36
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(37): used initial value expression for variable "M_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(37): signal "M_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 37
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(38): used initial value expression for variable "M_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(38): signal "M_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 38
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(39): used initial value expression for variable "L_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(39): signal "L_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 39
-Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(40): used initial value expression for variable "L_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(40): signal "L_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(79): signal "ship_reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 79
-Info (12128): Elaborating entity "alien_spawning" for hierarchy "alien_spawning:U9" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 318
+Info (12128): Elaborating entity "ship_collision_detector" for hierarchy "ship_collision_detector:U8" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 345
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(36): used initial value expression for variable "ship_x1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(36): signal "shipx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 36
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(37): used initial value expression for variable "ship_y1" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(37): signal "shipy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 37
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(38): used initial value expression for variable "ship_x2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(38): signal "shipx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 38
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(39): used initial value expression for variable "ship_y2" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(39): signal "shipy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 39
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(40): used initial value expression for variable "S_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(40): signal "S_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 40
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(41): used initial value expression for variable "S_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(41): signal "S_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 41
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(42): used initial value expression for variable "M_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(42): signal "M_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 42
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(43): used initial value expression for variable "M_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(43): signal "M_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 43
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(44): used initial value expression for variable "L_xMin" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(44): signal "L_xMax" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 44
+Warning (10542): VHDL Variable Declaration warning at ship_collision_detector.vhd(45): used initial value expression for variable "L_yMax" because variable was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at ship_collision_detector.vhd(45): signal "L_yMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ship_collision_detector.vhd Line: 45
+Info (12128): Elaborating entity "alien_spawning" for hierarchy "alien_spawning:U9" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 346
 Warning (10492): VHDL Process Statement warning at alien_spawning.vhd(59): signal "prng_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd Line: 59
 Warning (10492): VHDL Process Statement warning at alien_spawning.vhd(60): signal "set_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd Line: 60
 Warning (10492): VHDL Process Statement warning at alien_spawning.vhd(61): signal "L_yPos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/alien_spawning.vhd Line: 61
@@ -2015,7 +2134,7 @@ Warning (10492): VHDL Process Statement warning at PRNG.vhd(52): signal "Q4" is 
 Warning (10492): VHDL Process Statement warning at PRNG.vhd(53): signal "Q5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/PRNG.vhd Line: 53
 Warning (10492): VHDL Process Statement warning at PRNG.vhd(54): signal "Q6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/PRNG.vhd Line: 54
 Warning (10492): VHDL Process Statement warning at PRNG.vhd(55): signal "Q7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/PRNG.vhd Line: 55
-Info (12128): Elaborating entity "score_keeper" for hierarchy "score_keeper:U10" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 319
+Info (12128): Elaborating entity "score_keeper" for hierarchy "score_keeper:U10" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 347
 Warning (10540): VHDL Signal Declaration warning at score_keeper.vhd(27): used explicit default value for signal "score_0" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 27
 Warning (10540): VHDL Signal Declaration warning at score_keeper.vhd(48): used explicit default value for signal "score_1" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 48
 Warning (10540): VHDL Signal Declaration warning at score_keeper.vhd(69): used explicit default value for signal "score_2" because signal was never assigned a value File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 69
@@ -2062,7 +2181,11 @@ Warning (10492): VHDL Process Statement warning at score_keeper.vhd(316): signal
 Warning (10492): VHDL Process Statement warning at score_keeper.vhd(318): signal "score_8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 318
 Warning (10492): VHDL Process Statement warning at score_keeper.vhd(320): signal "score_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 320
 Warning (10492): VHDL Process Statement warning at score_keeper.vhd(322): signal "score_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/score_keeper.vhd Line: 322
-Info (12128): Elaborating entity "laser_controller" for hierarchy "laser_controller:U11" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 320
+Info (12128): Elaborating entity "laser_controller" for hierarchy "laser_controller:U11" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 348
+Info (12128): Elaborating entity "terrain" for hierarchy "terrain:U12" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 349
+Warning (10492): VHDL Process Statement warning at terrain.vhd(66): signal "x_array" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at terrain.vhd(69): signal "y_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/terrain.vhd Line: 69
+Info (12128): Elaborating entity "sound_system" for hierarchy "sound_system:U13" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 350
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
         Warning (14320): Synthesized away node "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/db/pll_altpll.v Line: 77
@@ -2129,15 +2252,21 @@ Info (13014): Ignored 112 buffer(s)
     Info (13016): Ignored 62 CARRY_SUM buffer(s)
     Info (13019): Ignored 50 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GSENSOR_SDI" and its non-tri-state driver. File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 23
+    Warning (13035): Inserted always-enabled tri-state buffer between "GSENSOR_SDI" and its non-tri-state driver. File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 24
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 24
+    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 25
 Info (13000): Registers with preset signals will power-up high File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GSENSOR_SDI~synth" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 23
+    Warning (13010): Node "GSENSOR_SDI~synth" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[8] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
+    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[5] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
+    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[3] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
+    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[2] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
+    Critical Warning (18010): Register ship_controller:U7|updown_count:X1|x_pos_sig[3] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
+    Critical Warning (18010): Register ship_controller:U7|updown_count:X1|x_pos_sig[1] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
     Critical Warning (18010): Register Alien_Movement:U5|temp[9] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U5|temp[7] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U5|temp[5] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
@@ -2148,12 +2277,6 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register Alien_Movement:U6|temp[4] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U6|temp[1] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U6|temp[0] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
-    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[8] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
-    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[5] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
-    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[3] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
-    Critical Warning (18010): Register ship_controller:U7|updown_count:Y1|x_pos_sig[2] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
-    Critical Warning (18010): Register ship_controller:U7|updown_count:X1|x_pos_sig[3] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
-    Critical Warning (18010): Register ship_controller:U7|updown_count:X1|x_pos_sig[1] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/up_down_counter.vhd Line: 22
     Critical Warning (18010): Register Alien_Movement:U4|temp[9] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U4|temp[7] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
     Critical Warning (18010): Register Alien_Movement:U4|temp[6] will power up to High File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/ip/Alien_Movement.vhd Line: 28
@@ -2179,20 +2302,20 @@ Info (144001): Generated suppressed messages file C:/Users/AlexH/OneDrive/Docume
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "sw0" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 34
-    Warning (15610): No output dependent on input pin "sw1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 35
-    Warning (15610): No output dependent on input pin "sw2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 36
-Info (21057): Implemented 7435 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "sw0" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 35
+    Warning (15610): No output dependent on input pin "sw1" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 36
+    Warning (15610): No output dependent on input pin "sw2" File: C:/Users/AlexH/OneDrive/Documents/4110/Project/DIGI_PROJECT/vga_top_level.vhd Line: 37
+Info (21057): Implemented 8667 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 76 output pins
+    Info (21059): Implemented 77 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 7346 logic cells
+    Info (21061): Implemented 8577 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 225 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Mon Nov 29 22:41:04 2021
-    Info: Elapsed time: 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 248 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Thu Dec 02 15:41:39 2021
+    Info: Elapsed time: 00:00:33
     Info: Total CPU time (on all processors): 00:00:48
 
 

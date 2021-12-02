@@ -76,6 +76,8 @@ set_location_assignment PIN_AB15 -to GSENSOR_SCLK
 set_location_assignment PIN_V11 -to GSENSOR_SDI
 set_location_assignment PIN_V12 -to GSENSOR_SDO
 set_location_assignment PIN_AB16 -to GSENSOR_CS_N
+set_location_assignment PIN_A8 -to sound
+set_global_assignment -name VHDL_FILE ip/terrain.vhd
 set_global_assignment -name VHDL_FILE ip/score_keeper.vhd
 set_global_assignment -name VHDL_FILE ip/laser_Creator.vhd
 set_global_assignment -name VHDL_FILE ip/PRNG.vhd
@@ -94,4 +96,5 @@ set_global_assignment -name QIP_FILE ip/pll.qip
 set_global_assignment -name VHDL_FILE project_tb.vhd
 set_global_assignment -name VHDL_FILE ship_collision_detector.vhd
 set_global_assignment -name VHDL_FILE alien_spawning.vhd
+set_global_assignment -name VHDL_FILE ip/sound_system.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

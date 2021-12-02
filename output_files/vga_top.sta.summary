@@ -3,23 +3,23 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'key1'
-Slack : -5.952
-TNS   : -23.304
+Slack : -5.720
+TNS   : -22.794
 
 Type  : Slow 1200mV 85C Model Setup 'pixel_clk_m'
-Slack : -0.617
-TNS   : -139.147
+Slack : -0.559
+TNS   : -78.112
 
 Type  : Slow 1200mV 85C Model Setup 'reset_n_m'
 Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'U1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 31.511
+Slack : 31.653
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pixel_clk_m'
-Slack : 0.197
+Slack : 0.099
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'U1|altpll_component|auto_generated|pll1|clk[0]'
@@ -35,11 +35,11 @@ Slack : 0.371
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'pixel_clk_m'
-Slack : 15.309
+Slack : 15.127
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'pixel_clk_m'
-Slack : 1.679
+Slack : 1.642
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'key1'
@@ -51,7 +51,7 @@ Slack : -3.000
 TNS   : -4.222
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pixel_clk_m'
-Slack : 9.470
+Slack : 9.346
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'U1|altpll_component|auto_generated|pll1|clk[0]'
@@ -59,27 +59,27 @@ Slack : 19.590
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'key1'
-Slack : -5.387
-TNS   : -21.074
+Slack : -5.163
+TNS   : -20.586
 
 Type  : Slow 1200mV 0C Model Setup 'pixel_clk_m'
-Slack : -0.520
-TNS   : -114.071
+Slack : -0.486
+TNS   : -71.731
 
 Type  : Slow 1200mV 0C Model Setup 'reset_n_m'
 Slack : 0.397
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'U1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 32.260
+Slack : 32.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'pixel_clk_m'
-Slack : 0.224
+Slack : 0.211
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'U1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.297
+Slack : 0.296
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'key1'
@@ -91,11 +91,11 @@ Slack : 0.337
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'pixel_clk_m'
-Slack : 15.769
+Slack : 15.594
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'pixel_clk_m'
-Slack : 1.553
+Slack : 1.520
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'key1'
@@ -107,7 +107,7 @@ Slack : -3.000
 TNS   : -4.222
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pixel_clk_m'
-Slack : 9.500
+Slack : 9.385
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'U1|altpll_component|auto_generated|pll1|clk[0]'
@@ -115,23 +115,23 @@ Slack : 19.577
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'key1'
-Slack : -2.445
-TNS   : -9.532
+Slack : -2.390
+TNS   : -9.510
 
 Type  : Fast 1200mV 0C Model Setup 'pixel_clk_m'
-Slack : -0.315
-TNS   : -56.760
+Slack : -0.149
+TNS   : -7.332
 
 Type  : Fast 1200mV 0C Model Setup 'reset_n_m'
 Slack : 0.693
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'U1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 35.786
+Slack : 35.880
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pixel_clk_m'
-Slack : 0.148
+Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'U1|altpll_component|auto_generated|pll1|clk[0]'
@@ -147,27 +147,27 @@ Slack : 0.169
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'pixel_clk_m'
-Slack : 17.529
+Slack : 17.409
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'pixel_clk_m'
-Slack : 0.784
+Slack : 0.764
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'key1'
 Slack : -3.000
-TNS   : -7.686
+TNS   : -7.592
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reset_n_m'
 Slack : -3.000
-TNS   : -4.078
+TNS   : -4.089
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pixel_clk_m'
-Slack : 9.389
+Slack : 9.330
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'U1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.641
+Slack : 19.642
 TNS   : 0.000
 
 ------------------------------------------------------------

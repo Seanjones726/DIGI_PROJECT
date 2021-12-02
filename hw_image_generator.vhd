@@ -29,6 +29,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.bus_multiplexer_pkg.all;
+use 	work.terrain_pkg.all;
 
 ENTITY hw_image_generator IS
   GENERIC(
@@ -87,7 +88,9 @@ ENTITY hw_image_generator IS
 	 las8_en : IN integer;
 	 digit_1 : IN score_array;
 	 digit_2 : IN score_array;
-	 digit_3 : IN score_array
+	 digit_3 : IN score_array;
+	 terrain_x : IN terrain_x_array;
+	 terrain_y : IN terrain_y_array
 	 
 	); 
 	 
@@ -205,6 +208,58 @@ BEGIN
 			red <= (OTHERS => '1');
 			green <= (OTHERS => '1');
 			blue <= (OTHERS => '1');
+			
+			
+			
+			
+		elsif ( column >= (terrain_x(0) - 64) and column <= terrain_x(0) and row >= terrain_y(0) and row <= (terrain_y(0) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(1) - 64) and column <= terrain_x(1) and row >= terrain_y(1) and row <= (terrain_y(1) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(2) - 64) and column <= terrain_x(2) and row >= terrain_y(2) and row <= (terrain_y(2) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(3) - 64) and column <= terrain_x(3) and row >= terrain_y(3) and row <= (terrain_y(3) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(4) - 64) and column <= terrain_x(4) and row >= terrain_y(4) and row <= (terrain_y(4) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(5) - 64) and column <= terrain_x(5) and row >= terrain_y(5) and row <= (terrain_y(5) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(6) - 64) and column <= terrain_x(6) and row >= terrain_y(6) and row <= (terrain_y(6) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(7) - 64) and column <= terrain_x(7) and row >= terrain_y(7) and row <= (terrain_y(7) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(8) - 64) and column <= terrain_x(8) and row >= terrain_y(8) and row <= (terrain_y(8) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(9) - 64) and column <= terrain_x(9) and row >= terrain_y(9) and row <= (terrain_y(9) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+		elsif ( column >= (terrain_x(10) - 64) and column <= terrain_x(10) and row >= terrain_y(10) and row <= (terrain_y(10) + 1)) then
+			red <= "00001111";
+			green <= "00000111";
+			blue <= (OTHERS => '0');
+			
+			
+			
+			
 		else 
 			red <= (OTHERS => '0');
 			green <= (OTHERS => '0');
